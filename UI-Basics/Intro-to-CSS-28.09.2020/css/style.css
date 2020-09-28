@@ -1,0 +1,31 @@
+/* * CSS Anatomy */
+
+/* *Selectors */
+/* ? Universal selector */
+* {
+  background-color: pink;
+  /* margin: 0; */
+}
+/* ? 1. Element Selector */
+p {
+  color: black;
+  background-color: aqua;
+  font-size: 16px;
+}
+
+span {
+  color: pink;
+  background-color: black;
+}
+
+/*? 2. ID Selector */
+#paragraph-id {
+  color: red;
+  background-color: black;
+}
+
+/*?  3.Class Selector */
+.class-paragraph {
+  color: black;
+  background-color: yellow;
+}
