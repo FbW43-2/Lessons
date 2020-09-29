@@ -1,0 +1,28 @@
+.ul-1 li {
+  color: blue;
+  /* list-style: ; */
+  list-style-type: square;
+  /* list-style: url(https://interactive-examples.mdn.mozilla.net/media/examples/rocket.svg); */
+  list-style: url(../images/school.svg);
+}
+
+.div-1 p,
+.div-1 h2 {
+  color: red;
+}
+
+.ul-2 li {
+  color: blue;
+  /* list-style: ; */
+  list-style-type: circle;
+  background-color: aqua;
+  list-style-position: inside;
+}
+
+.ol-2 li {
+  list-style-type: upper-roman;
+}
+
+.ul-3 li {
+  list-style-type: none;
+}
