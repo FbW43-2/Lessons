@@ -6,6 +6,10 @@ a:visited {
     color: salmon;
 }
 
+a:active {
+    color: palegreen;    
+}
+
 /* 
 h1:hover {
     color: brown;
@@ -19,4 +23,28 @@ The two rules above can be combined in one line, separated by comma (see below)
 
 h1:hover, a:hover {
     color: brown;
+}
+
+a:nth-of-type(2):hover {
+    color: darkkhaki;
+}
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: peru;
+}
+
+.square:hover, .square:active {
+    width: 230px;
+    height: 230px;
+    border-radius: 20%;
+}
+
+.square:hover {
+    background-color: purple;
+}
+.square:active {
+    background-color: seagreen;
 }
