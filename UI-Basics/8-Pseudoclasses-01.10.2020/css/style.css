@@ -1,0 +1,22 @@
+h1 {
+    color: teal;
+}
+
+a:visited {
+    color: salmon;
+}
+
+/* 
+h1:hover {
+    color: brown;
+}
+
+a:hover {
+    color: brown;
+} 
+The two rules above can be combined in one line, separated by comma (see below)
+*/
+
+h1:hover, a:hover {
+    color: brown;
+}
