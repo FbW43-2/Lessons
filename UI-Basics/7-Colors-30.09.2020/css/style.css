@@ -1,0 +1,39 @@
+
+h1 {
+    /* The following two color values are the same */
+    color:rgb(100, 149, 237);
+    /* color: cornflowerblue; */
+}
+
+.color-type-1 {
+    color: #0000A7;
+}
+
+.border {
+    border: solid 5px black;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+}
+
+.inner-square {
+    width: 100px;
+    height: 300px;
+
+    /* 
+        We can define transparency by using the alpha channel 'a' in the rgba (from 0 to 1).
+        Alternatively, we can use the rule 'opacity'.
+
+        The alpha value in the rule background-color does not affect borders,
+        whereas the opacity rule does.
+    */
+
+    background-color: rgba(48, 161, 48, 0.6);
+
+    /* opacity: 0.3; */
+}
+
