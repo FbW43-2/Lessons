@@ -1,0 +1,28 @@
+.square {
+    border: solid 6px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+    width: 360px;
+    height: 360px;
+
+    background-color: peru;
+}
+
+.outer:hover {
+    background-color: steelblue;
+}
+
+.inner {
+    width: 270px;
+    height: 270px;
+
+    background-color: springgreen;
+}
+
+.inner:hover {
+    background-color: violet;
+}
