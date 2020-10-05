@@ -1,0 +1,10 @@
+main {
+  height: 100vh;
+}
+
+footer {
+  color: white;
+  text-align: right;
+  padding: 50px;
+  background-color: black;
+}
