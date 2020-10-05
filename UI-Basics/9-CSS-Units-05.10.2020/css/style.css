@@ -5,6 +5,11 @@ span {
 }
 
 /* ? E.g relative unit */
+
+h1 {
+  padding: 10vmin;
+  background-color: yellow;
+}
 .paragraph {
   background-color: yellow;
   width: 60%;
@@ -13,10 +18,14 @@ span {
 }
 
 div {
-  height: 100vh;
+  height: 50vh;
+  width: 90vw;
+  /* width: 60vmin; */
   background-color: brown;
 }
 
+.line-height-example {
+}
 /* ! Pixel use case for responsive design */
 /* ? Small devices (landscape phones, 576px and up) */
 /* @media (min-width: 576px) {
