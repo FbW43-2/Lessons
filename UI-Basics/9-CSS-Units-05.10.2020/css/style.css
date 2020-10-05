@@ -1,0 +1,51 @@
+/* ? E.g absolute unit */
+p,
+span {
+  font-size: 25px;
+}
+
+/* ? E.g relative unit */
+.paragraph {
+  background-color: yellow;
+  width: 60%;
+  /* width: 100vw; */
+  font-size: 1.25rem;
+}
+
+div {
+  height: 100vh;
+  background-color: brown;
+}
+
+/* ! Pixel use case for responsive design */
+/* ? Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+  p {
+    font-size: 12px;
+    color: red;
+  }
+} */
+
+/* ? Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+  p {
+    font-size: 14px;
+    color: blue;
+  }
+} */
+
+/* ? Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  p {
+    font-size: 16px;
+    color: green;
+  }
+} */
+
+/* ? Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  p {
+    font-size: 40px;
+    color: pink;
+  }
+} */
