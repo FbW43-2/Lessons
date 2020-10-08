@@ -1,0 +1,8 @@
+.img-border {
+    border: solid 8px indianred;
+    border-radius: 18px;
+}
+
+.img-transparent-60 {
+    opacity: 0.6;
+}
