@@ -6,3 +6,11 @@
 .img-transparent-60 {
     opacity: 0.6;
 }
+
+p {
+    float: right;
+}
+
+img {
+    float: right;
+}
