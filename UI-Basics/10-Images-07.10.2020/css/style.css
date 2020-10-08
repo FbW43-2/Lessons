@@ -11,6 +11,25 @@ p {
     float: right;
 }
 
-img {
+img.fl-right {
     float: right;
+}
+
+.section {
+    height: 400px;
+}
+
+/* cover: it will cut off the sides of the image, preserving the aspect ratio */
+.img-1 {
+    object-fit: cover;
+}
+
+/* contain: the content is scaled to maintain its aspect ratio while fitting within the element's box */
+.img-2 {
+    object-fit: contain;
+}
+
+/* fill (default): If necessary, the object will be stretched or squished to fit */
+.img-3 {
+    object-fit: fill;
 }
