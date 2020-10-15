@@ -1,0 +1,10 @@
+/* Only paragraphs placed right after spans will be colored in green */
+span + p {
+    color: green;
+}
+/* Only spans placed right after a paragraph will be colored in purple */
+p + span {
+    color: purple;
+}
+
+/* Other selectors/combinators: https://www.w3schools.com/cssref/css_selectors.asp */
