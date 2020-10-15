@@ -11,8 +11,9 @@
         - defines a title in the browser toolbar
     
     -->
-    <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style1.css">
+
 </head>
 <body>
     <h1>Accessibility and Cascade</h1>
@@ -52,12 +53,31 @@
 
     </div>
     <h3>2.2 Specificity: ID, then class, then type</h3>
+
+    <p class="p-specificity" id="my-paragraph">This is a paragraph</p>
+
+
     <h3>2.3 Source order</h3>
+    <p> In case of multiple rules with equal specificity, the last rules will be applied.</p>
+    <p class="p-dynamic-style">This is a paragraph whose style is defined in two CSS files</p>
 
     <h3>2.4 !important is bad practice</h3>
 
+    <p class="p-specificity" id="p-important" style="color: brown;">This is a paragraph</p>
+
     <h3>2.5 Avoid inline style</h3>
 
+    <p>Inline style always wins over any rule declared in CSS files</p>
+
+    <p class="p-specificity" style="color: brown;">This is a paragraph</p>
+
+    <p>Bottom line: avoid using the important keyword and inline style</p>
     </section>
+
+    <h3>2.6 More random example</h3>
+
+    We exclude a specific element from a rule by using the :not pseudoclass
+    <p class="p-to-exclude">We want this paragraph to be excluded from a CSS rule</p>
+
 </body>
 </html>
