@@ -16,10 +16,26 @@
 <body>
     <h1>Accessibility and Cascade</h1>
     
-    <hr>
+    <section>
     <h2>1. Accessibility</h2>
     
-    <hr>
+    <p>A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times.</p>
+
+    <p>Semantic elements are elements with a meaning: for example, if you need a button, use the button tag, not a div.</p>
+    <p>Semantic elements (h1, h2, ..., p, table, button, ...) clearly define their content.</p>
+    
+    <h3>1.1 Headings</h3>
+    <p>
+        Search engines use the headings to index the structure and content of your web pages.
+    </p>
+
+    <h3>1.2 Alternative text in images</h3>
+    <p>The alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).</p>
+    <img src="img/img.png" alt="Image about something (this should be a good description)">
+
+    </section>
+
+    <section>
     <h2>2. Understanding the Cascade</h2>
     <h3>2.2 CSS: adjacent sibling combinator</h3>
     <div>
@@ -29,5 +45,6 @@
         <p>This is a paragraph</p> <p>This is a paragraph</p>
 
     </div>
+    </section>
 </body>
 </html>
