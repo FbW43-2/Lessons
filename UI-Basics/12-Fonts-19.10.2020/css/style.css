@@ -1,0 +1,25 @@
+.serif {
+  font-family: 'IBM Plex Serif', Times, serif;
+}
+.serif p {
+  font-size: 20px;
+}
+.sans-serif {
+  font-family: Arial, sans-serif;
+}
+
+.script {
+  font-family: Sacramento, cursive;
+}
+
+.monospace {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.display {
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+section {
+  margin: 50px 0;
+}
