@@ -14,9 +14,18 @@ body {
 
 .box-2 {
     background-color: blueviolet;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .box-middle {
-    background-color: cornflowerblue;
+    background-color: yellow;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+
+.border {
+    border-bottom: solid 20px black;
+    border-top: solid 20px black;
 }
