@@ -25,7 +25,7 @@ header {
     color: white;
 }
 
-header > .header-sign-in {
+.header-sign-in {
     float: right;
 }
 
