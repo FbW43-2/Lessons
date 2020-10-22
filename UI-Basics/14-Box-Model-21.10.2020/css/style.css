@@ -3,12 +3,12 @@
     height: 300px;
 }
 
-body > div.box:nth-of-type(1) {
+div.box:nth-of-type(1) {
     background-color: teal;
     margin-bottom: 40px;
 }
 
-body > div.box:nth-of-type(2) {
+div.box:nth-of-type(2) {
     background-color: yellow;
     margin-bottom: 20px;
     padding-top: 100px;
@@ -18,18 +18,59 @@ body > div.box:nth-of-type(2) {
     border-top: solid 20px black;
 }
 
-body > div.box:nth-of-type(3) {
+div.box:nth-of-type(3) {
     background-color: blueviolet;
     margin-top: 20px;
 }
 
-body > div.box:nth-of-type(3) > div.box {
-    width: 180px;
-    height: 180px;
-    background-color: wheat;
+div.box:nth-of-type(3) > div {
     margin: 0 auto;
+}
+
+div.box:nth-of-type(3) > div.box {
+    width: 100px;
+    height: 100px;
+    background-color: wheat;
     /* 
     https://stackoverflow.com/a/1762575
     Margin does not affect the child's position in relation to its parent, unless the parent has padding, in which case most browsers will then add the child's margin to the parent's padding.
     */
+    margin-top: 20px;
+}
+
+div.box:nth-of-type(3) > div.text {
+    color: white;
+    width: 80%;
+}
+
+body {
+    background: wheat;
+}
+
+header {
+    border-bottom: solid 1px grey;
+    margin: 0 20px;
+}
+
+header > .header-menu {
+    float: right;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 960px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main {
+    background: white;
 }
