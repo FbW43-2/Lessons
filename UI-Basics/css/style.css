@@ -18,17 +18,23 @@ body {
 main {
     background-color: white;
     padding-top: 40px;
+    height: 100vh;
 }
 
 header {
     background-color: #0063a6;
     color: white;
-}
-
-.header-sign-in {
-    float: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer {
     background-color: #212121;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.float-right {
+    float: right;
 }
