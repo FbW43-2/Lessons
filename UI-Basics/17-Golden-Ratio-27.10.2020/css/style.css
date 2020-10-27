@@ -1,0 +1,58 @@
+:root {
+  font-size: 62.5%; /** 10px*/
+  --header-color: #ffd700;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: var(--header-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.heading {
+  color: #04083c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+section {
+  margin: 40px;
+}
+p {
+  /* margin: 0px 40px; */
+  /* ! Values based on Golden Ratio Calculator */
+  font-size: 1.6rem; /*? 16px*/
+  line-height: 1.75; /*? 28px*/
+  width: 600px;
+  text-align: justify;
+}
+
+footer {
+  color: #ffffff;
+  background-color: rgb(0, 38, 56);
+  padding: 50px;
+  font-size: 1.4rem;
+}
+footer ul {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+
+/* !Descendants  */
+footer li {
+  padding: 5px 10px;
+  margin: 0px 5px;
+  display: inline-block;
+}
+
+/* ! Children */
+footer > span {
+  display: block;
+  text-align: center;
+}
