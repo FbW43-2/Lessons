@@ -16,8 +16,8 @@ main.container {
 
 .box {
     background-color: coral;
-    height: 360px;
-    width: 300px;
+    height: 200px;
+    width: 360px;
     padding: 40px;
     border: solid 10px black;
 
@@ -60,4 +60,16 @@ aside {
 .section-display-inline .box-2 {
     display: inline;
     margin-top: 40px;
+}
+
+.greta-bg {
+    /* 
+    background-image: url('/19-Box-Model-Styling-And-Block-Elements-28.10.2020/img/greta-meme.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    */
+
+    /* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+    background: url('/19-Box-Model-Styling-And-Block-Elements-28.10.2020/img/greta-meme.jpg') center / contain no-repeat;
 }
