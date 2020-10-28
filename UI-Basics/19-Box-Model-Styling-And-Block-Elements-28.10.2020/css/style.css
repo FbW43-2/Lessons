@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    padding: 0 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+main.container {
+    padding-top: 40px;
+    background-color: bisque;
+}
+
+.box {
+    background-color: coral;
+    height: 360px;
+    width: 300px;
+    padding: 40px;
+    border: solid 10px black;
+
+    margin: 20px;
+
+}
+
+.box-sizing {
+    box-sizing: border-box;
+}
+
+aside {
+    border-left: solid 5px black;
+    max-width: 300px;
+    float: right;
+    padding: 10px;
+    margin-left: 30px;
+}
