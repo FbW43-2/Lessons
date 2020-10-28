@@ -37,6 +37,61 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ipsum distinctio ab quam officiis odit enim neque, dolor ea perferendis quidem harum omnis repudiandae reprehenderit maxime a nobis inventore officia animi aperiam similique? Sapiente in tempore, sit ex assumenda minus?
             </p>
         </section>
+
+        <section>
+            <h2>Block, Inline-Block and Inline elements</h2>
+
+            <section class="section-display-block">
+                <h3>Using display: block (divs are block by default)</h3>
+                <p>
+                    A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+                </p>
+
+                <div class="box-2"></div>
+
+                <div class="box-2"></div>
+    
+                <div class="box-2"></div>
+
+            </section>
+            <section class="section-display-inline-block">
+                <h3>Using display: inline-block</h3>
+                <p>
+                    Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+                </p>
+                <div class="box-2"></div>
+
+                <div class="box-2"></div>
+    
+                <div class="box-2"></div>
+            </section>
+
+            <section class="section-display-inline">
+                <h3>Using display: inline</h3>
+                <p>
+                    An inline element does not start on a new line and it only takes up as much width as necessary.
+                </p>
+                <aside>
+                    span elements are inline by default.
+                </aside>
+                <p>
+                    The properties width, height, margin-top, margin-bottom and float have no effect on inline elements.
+                </p>
+                <p>
+                    As mentioned in the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">MDN docs</a>, float sometimes modifies the computed value of display.
+                    <br>
+                    For example, if you apply a float rule to an inline element, it becomes a block element.
+                </p>
+                <div class="box-2">div-box-1</div>
+
+                <div class="box-2">div-div-div-box-2</div>
+    
+                <div class="box-2">box-3</div>
+
+                <span class="box-2">span-box-4</span>
+                <span class="box-2">box-5</span>
+            </section>
+        </section>
     </main>
 
     <footer>

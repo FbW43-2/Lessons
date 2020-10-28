@@ -36,3 +36,28 @@ aside {
     padding: 10px;
     margin-left: 30px;
 }
+
+/* -------------------------------------------- */
+
+
+.box-2 {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: solid 5px black;
+    margin: 5px;
+    background-color: white;   
+}
+
+.section-display-block .box-2 {
+    display: block;
+}
+
+.section-display-inline-block .box-2 {
+    display: inline-block;
+}
+
+.section-display-inline .box-2 {
+    display: inline;
+    margin-top: 40px;
+}
