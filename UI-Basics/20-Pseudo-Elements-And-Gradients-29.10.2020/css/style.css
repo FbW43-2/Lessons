@@ -1,0 +1,58 @@
+.test-div {
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+    display: inline-block;
+}
+
+.section-pseudo-elements > .test-div::before {
+    content: "before";
+}
+
+.section-pseudo-elements > .test-div::after {
+    content: "after";
+}
+
+p.my-quote::before {
+    content: '"';
+    background-color: coral;
+    margin-right: 10px;
+}
+
+p.my-quote::after {
+    content: '"';
+    background-color: cyan;
+    margin-left: 10px;
+}
+
+ul.personal-list > li::before {
+    content: "🔗";
+}
+
+.div-linear-gradient:first-of-type {
+    background: linear-gradient(45deg, red, blue);
+}
+
+.div-linear-gradient:nth-of-type(2) {
+    background: linear-gradient(-90deg, lime, peru 65%, grey);
+}
+
+.div-linear-gradient:nth-of-type(3) {
+    background: linear-gradient(to right, red 0 40%, blue 50% 100%);
+}
+
+.div-linear-gradient:nth-of-type(4) {
+    background: linear-gradient(to top, red 0 25%, lime 25% 50%, blue 50% 75%, red 75% 100%);
+}
+
+.div-radial-gradient-1 {
+    background: radial-gradient(peru, blue);
+}
+
+.div-radial-gradient-2 {
+    background: radial-gradient(ellipse at bottom, peru, blue)
+}
+
+.div-radial-gradient-3 {
+    background: radial-gradient(circle at 80%, black, black 50%, #eee 65%, #333 75%);
+}
