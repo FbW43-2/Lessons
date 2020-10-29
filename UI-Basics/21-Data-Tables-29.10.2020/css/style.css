@@ -1,6 +1,11 @@
-table {
+#table-dci-students {
     width: 100%;
     /* border-collapse: collapse; */
+}
+
+#table-dci-students caption {
+    text-align: right;
+    caption-side: bottom;
 }
 
 thead {
