@@ -54,5 +54,5 @@ ul.personal-list > li::before {
 }
 
 .div-radial-gradient-3 {
-    background: radial-gradient(circle at 80%, black, black 50%, #eee 65%, #333 75%);
+    background: radial-gradient(circle at 80%, black, blue 50%, #eee 65%, #333 75%);
 }

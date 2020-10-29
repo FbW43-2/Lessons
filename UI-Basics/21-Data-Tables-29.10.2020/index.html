@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data tables</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <h1>Data tables in HTML</h1>
+
+        <table class="table-design">
+
+            <thead>
+                <tr>
+                    <th colspan="3" scope="colgroup">Basic info</th>
+                    <th scope="col">Other info</th>
+                </tr>
+                <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Hobbies</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Florin</td>
+                    <td></td>
+                    <td rowspan="2">git, coding, baskteball, shopping</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mariana</td>
+                    <td>Pantelic</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Raul Eduarte</td>
+                    <td>Leipzig, drumming</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td colspan="2">Dude 1</td>
+                    <td rowspan="2">Leipzig, drumming</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td colspan="2">dude 2</td>
+                </tr>
+            </tbody>
+            
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </main>
+</body>
+</html>
