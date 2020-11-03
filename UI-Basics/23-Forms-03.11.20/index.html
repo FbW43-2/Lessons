@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Forms</h1>
+    </header>
+    <main>
+      <section class="contact">
+        <form class="contact-form" action="https://freecatphotoapp.com/submit-cat-photo" method="POST">
+          <fieldset>
+          <legend>Put in your details</legend>
+          <div>
+            <label for="first-name">First Name*:</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+
+          <div>
+            <label for="last-name">Last Name*:</label>
+            <input type="text" id="last-name" name="last-name" />
+          </div>
+          <div>
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" />
+          </div>
+          <div>
+            <label for="email">E-Mail*:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" />
+          </div>
+
+          <div>
+            <label for="telephone">Telephone:</label>
+            <input type="tel" id="telephone" name="telephone" />
+          </div>
+
+          <div>
+            <h3>Gender*</h3>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other" value="other" />
+          </div>
+
+          <div>
+            <h3>Favorite Car Maker</h3>
+            <label for="bmw">BMW</label>
+            <input type="checkbox" name="favourite-car-maker" id="bmw" />
+
+            <label for=mercedes">Mercedes</label>
+            <input
+              type="checkbox"
+              name="favourite-car-maker"
+              id="mercedes"
+              checked
+            />
+
+            <label for="bugatti">Bugatti</label>
+            <input
+              type="checkbox"
+              name="favourite-car-maker"
+              id="bugatti"
+            />
+          </div>
+
+          <div>
+            <label for="comment">Comment:</label><br>
+            <textarea name="comment" id="comment" cols="30" rows="10" maxlength="150"></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+          </fieldset>
+
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
