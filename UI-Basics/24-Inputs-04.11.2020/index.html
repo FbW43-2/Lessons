@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson - Inputs</title>
+</head>
+<body>
+    <header>
+        <h1>Forms & Inputs</h1>
+    </header>
+
+    <main role="main">
+        <section>
+            <form method="POST" action="/upload-student">
+                <fieldset>
+                    <legend>Upload information about a student</legend>
+                    <div>
+                        <label for="input-student-name">Student name</label>
+                        <input type="text" id="input-student-name" name="input-student-name" required/>
+                    </div>
+                    <div>
+                        <label for="input-student-address-1">Student address 1</label>
+                        <input type="text" id="input-student-address-1" name="input-student-address-1" required minlength="5" maxlength="10"/>
+                    </div>
+                    <div>
+                        <label for="input-student-address-2">Student address 2</label>
+                        <input type="text" id="input-student-address-2" name="input-student-address-2" minlength="5" maxlength="10"/>
+                    </div>
+                    <div>
+                        <label for="input-student-age">Student age</label>
+                        <input type="number" id="input-student-age" name="input-student-age"/>
+                    </div>
+                    <div>
+                        <label>Description of a student
+                            <textarea cols="20" rows="5" id="input-student-description"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="input-file">Upload a file</label>
+                        <input type="file" id="input-file" name="input-file" accept="image/*" multiple/>
+                    </div>
+                    <div>
+                        <button type="submit">Upload information</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
