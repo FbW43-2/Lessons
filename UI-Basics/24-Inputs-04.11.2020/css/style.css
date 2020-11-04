@@ -1,0 +1,37 @@
+
+input:invalid {
+    /* border: solid 3px red; */
+    border: none;
+    outline: dashed 3px blue;
+}
+
+input:valid {
+
+}
+
+input:required {
+    background-color: khaki;
+}
+
+input:optional {
+
+}
+
+input:invalid:required {
+    /* matches all inputs that have the required keyword and are in an invalid state */
+    /* border-radius: 15px; */
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input {
+    /* outline: none; */
+    margin: 10px 0;
+}
+
+textarea::placeholder {
+    color: darkcyan;
+    font-weight: bold;
+}

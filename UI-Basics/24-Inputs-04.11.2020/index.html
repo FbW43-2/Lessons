@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson - Inputs</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
                     <legend>Upload information about a student</legend>
                     <div>
                         <label for="input-student-name">Student name</label>
-                        <input type="text" id="input-student-name" name="input-student-name" required/>
+                        <input placeholder="Place the name here" type="text" id="input-student-name" name="input-student-name" required/>
                     </div>
                     <div>
                         <label for="input-student-address-1">Student address 1</label>
@@ -29,16 +30,34 @@
                     </div>
                     <div>
                         <label for="input-student-age">Student age</label>
-                        <input type="number" id="input-student-age" name="input-student-age"/>
+                        <input type="number" id="input-student-age" name="input-student-age" min="14" max="20"/>
                     </div>
                     <div>
                         <label>Description of a student
-                            <textarea cols="20" rows="5" id="input-student-description"></textarea>
+                            <textarea placeholder="Describe the student here..." cols="20" rows="5" id="input-student-description"></textarea>
                         </label>
+                    </div>
+                    <div>
+                        <label for="country_code">Country code:</label>
+                        <input type="text" id="country_code" name="country_code"
+                        pattern="[A-Z]{2}" title="Three letter country code">
                     </div>
                     <div>
                         <label for="input-file">Upload a file</label>
                         <input type="file" id="input-file" name="input-file" accept="image/*" multiple/>
+                    </div>
+                    <div>
+                        <label for="input-password">Password</label>
+                        <input type="password" 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        id="input-password" 
+                        name="input-password" 
+                        required>
+                    </div>
+                    <div>
+                        <label for="input-fruit">Would you prefer a banana or a cherry?</label>
+                        <input id="input-fruit" name="input-fruit" pattern="[Bb]anana|[Cc]herry">
                     </div>
                     <div>
                         <button type="submit">Upload information</button>
