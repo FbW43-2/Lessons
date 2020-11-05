@@ -37,7 +37,43 @@
                         <textarea placeholder="Describe the student here..." cols="20" rows="5" id="input-student-description" name="input-student-description"></textarea>
                     </div>
                     <div>
-                        <label for="country_code">Country code:</label>
+                        <label for="input-fruit">Type a fruit you like</label>
+                        <input list="fruits" type="text" id="input-fruit" name="input-fruit">
+
+                        <datalist id="fruits">
+                            <option value="Apple">
+                            <option value="Pear">
+                            <option value="Plum">
+                            <option value="Grape">
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="select-vegetables">Pick a vegetable</label>
+                        <select id="select-vegetables" name="vegetables">
+                            <optgroup label="Green vegetables">
+                                <option value="zucchini">Zucchini</option>
+                                <option value="cucumber">Cucumber</option>
+                                <option value="broccoli">Broccoli</option>
+                            </optgroup>
+
+                            <optgroup label="White vegetables">
+                                <option value="culliflower">Culliflower</option>
+                            </optgroup>
+                            
+                            <optgroup label="Red vegetables">
+                                <option value="tomato">Tomato</option>
+                                <option value="beetroots">Beetroots</option>
+                            </optgroup>
+                            
+                            <optgroup label="Orange vegetables">
+                                <option value="carrots">Carrots</option>
+                                <option value="aubergine">Aubergine</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                    <div>
+                        <label for="country_code">Country code</label>
                         <input type="text" id="country_code" name="country_code"
                         pattern="[A-Z]{2}" title="Three letter country code">
                     </div>
