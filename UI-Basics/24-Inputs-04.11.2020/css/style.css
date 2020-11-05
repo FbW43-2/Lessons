@@ -2,7 +2,7 @@
 input:invalid {
     /* border: solid 3px red; */
     border: none;
-    outline: dashed 3px blue;
+    outline: dashed 1px red;
 }
 
 input:valid {
@@ -34,4 +34,27 @@ input {
 textarea::placeholder {
     color: darkcyan;
     font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    width: 260px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+input[type="text"] {
+    border: solid 2px black;
+}
+
+input[minlength="5"] {
+    border: solid 4px tomato;
+}
+
+input[title] {
+    font-style: italic;
+}
+
+input.font-italic {
+    font-style: italic;
 }
