@@ -58,12 +58,3 @@ input[title] {
 input.font-italic {
     font-style: italic;
 }
-
-#form-1 {
-    position: relative;
-}
-#form-1 legend {
-    background-color: yellowgreen;
-    position: absolute;
-    right: 0;
-}

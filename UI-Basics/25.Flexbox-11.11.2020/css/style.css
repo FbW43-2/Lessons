@@ -1,0 +1,149 @@
+header {
+    border-bottom: solid 1px gainsboro;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover, footer a:visited:hover {
+    color: lightgray;
+}
+
+footer a:visited {
+    color: lightskyblue;
+}
+
+nav[role="navigation"] {
+    /* Apparently we should not use role as a CSS selector */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: solid 2px green;
+    margin: 8px;
+}
+
+.rectangle {
+    width: 360px;
+    height: 100px;
+    border: solid 2px indianred;
+    margin: 8px;
+}
+
+.section-inline-block > .square {
+    display: inline-block;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.container-flex.flex-start {
+    justify-content: flex-start;
+}
+
+.container-flex.flex-end {
+    justify-content: flex-end;
+}
+
+.container-flex.space-between {
+    justify-content: space-between;
+}
+
+.container-flex.flex-center {
+    justify-content: center;
+}
+
+.container-flex > .square {
+
+}
+
+.section-inline-block fieldset {
+    display: inline-block;
+    border: solid 2px violet;
+    width: 300px;
+}
+
+.section-inline-block fieldset:nth-of-type(2) {
+    float: right;
+}
+
+.square.height-s {
+    height: 60px;
+    /* line-height: 60px; */
+    color: blueviolet
+}
+
+.square.height-m {
+    height: 110px;
+    line-height: 110px;
+}
+
+.square.height-l {
+    height: 210px;
+    /* line-height: 210px; */
+}
+
+.container-flex.height-container {
+    border: solid 2px black;
+    height: 400px;
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
+    /* align-items: baseline; */
+}
+
+.container-flex.height-container > .square {
+    text-align: center;
+}
+
+.container-flex.items-direction-wrap {
+    /* flex-direction: row;  */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+
+    flex-flow: row wrap;
+}
+
+.container-flex.items-direction-wrap > .square {
+    width: 160px;
+    height: 160px;
+}
+
+.container-flex.items-grow > .square {
+    flex-grow: 1;
+}
+
+.container-flex.items-grow > .square.box-3 {
+    flex-grow: 3;
+}
+
+
+.container-flex.items-shrink > .square {
+    width: 200px;
+    flex-shrink: 1;
+}
+
+.container-flex.items-shrink > .square.box-3 {
+    flex-shrink: 2;
+    background-color: cadetblue;
+}
+
+.container-flex.items-flex-basis > .square.box-1 {
+    /* auto takes the element height and width into consideration */
+    /* flex-basis: auto; */
+
+    /* the element size is going to be adapted to the content */
+    flex-basis: content;
+
+    flex-basis: 250px;
+}

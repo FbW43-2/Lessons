@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lessons / Flexbox</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <span>LOGO HERE</span>
+        <nav>
+            <a href="/about-me">About me</a>
+            <a href="/my-services">My services</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>Lesson: Flexbox</h1>
+
+        <div role="navigation">
+            <h3>Some navigation links in here</h3>
+            <ul>
+                <li><a href="/nav-1">Navigation link 1</a></li>
+                <li><a href="/nav-2">Navigation link 2</a></li>
+                <li><a href="/nav-3">Navigation link 3</a></li>
+            </ul>
+        </div>
+
+        <section>
+            <h2>Elements next to each other with inline-block</h2>
+            <p>The rule <i>display: inline-block</i> is given to <strong>the items</strong>, not the container</p>
+            
+            <div class="section-inline-block">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+
+        </section>
+
+        <section class="section-inline-block">
+            <h2>Form and fieldsets using inline-block</h2>
+
+            <form method="POST" action="/form-endpoint" >
+                <fieldset>
+                    <legend>Fieldset 1<legend>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Fieldset 2<legend>
+
+                </fieldset>
+            </form>
+
+        </section>
+
+        <section>
+            <h2>Elements next to each other with flexbox</h2>
+            <p>The rule <i>display: flex</i> is given to <strong>the container</strong></p>
+            <p><strong>Note:</strong> Feel free to change classes from <i>square</i> to <i>rectangle</i> and viceversa to play around and see the effects of <i>flex</i>.</p>
+            <section>
+                <h3>Flexbox with justify-content: flex-start</h3>
+                <div class="container-flex flex-start">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox with justify-content: flex-end</h3>
+                <div class="container-flex flex-end">
+                    <div class="square">1</div>
+                    <div class="square">2</div>
+                    <div class="square">3</div>
+                    <div class="square">4</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox with justify-content: space-between</h3>
+                <div class="container-flex space-between">
+                    <div class="square"></div>
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox with justify-content: center</h3>
+                <div class="container-flex flex-center">
+                    <div class="square"></div>
+                    <div class="rectangle"></div>
+                    <div class="square"></div>
+                </div>
+            </section>
+            
+            <section>
+                <h3>Flexbox with different align-items</h3>
+                <div class="container-flex height-container">
+                    <div class="square height-s">Box 1 Lorem, ipsum dolor sit amet </div>
+                    <div class="square height-l">Box 2</div>
+                    <div class="square height-m">Box 3</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox: playing with <i>flex-direction</i> and <i>flex-wrap</i></h3>
+                <div class="container-flex items-direction-wrap">
+                    <div class="square">Box 1</div>
+                    <div class="square">Box 2</div>
+                    <div class="square">Box 3</div>
+                    <div class="square">Box 4</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox (rule on items): playing with <i>flex-grow</i></h3>
+                <div class="container-flex items-grow">
+                    <div class="square box-1">Box 1</div>
+                    <div class="square box-2">Box 2</div>
+                    <div class="square box-3">Box 3</div>
+                    <div class="square box-4">Box 4</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox (rule on items): playing with <i>flex-shrink</i></h3>
+                <p>Resize the browser to see the effects of this</p>
+                <div class="container-flex items-shrink">
+                    <div class="square box-1">Box 1</div>
+                    <div class="square box-2">Box 2</div>
+                    <div class="square box-3">Box 3</div>
+                    <div class="square box-4">Box 4</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Flexbox (rule on items): playing with <i>flex-basis</i></h3>
+                <p>Resize the browser to see the effects of this</p>
+                <div class="container-flex items-flex-basis">
+                    <div class="square box-1">Box 1 Box 1 Box 1 Box 1 Box 1 Box 1 Box 1 Box 1 Box 1 Box 1 Box 1</div>
+                    <div class="square box-2">Box 2</div>
+                    <div class="square box-3">Box 3 Box 3 Box 3 Box 3 Box 3 Box 3</div>
+                    <div class="square box-4">Box 4</div>
+                </div>
+            </section>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
