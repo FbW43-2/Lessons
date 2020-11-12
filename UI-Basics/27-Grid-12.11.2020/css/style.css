@@ -1,0 +1,18 @@
+.grid-container {
+    border: solid 1px black;
+    display: grid;
+
+    grid-template-columns: 1fr minmax(397px, 400px) 2fr;
+    grid-template-rows: 100px 100px 100px;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 15px 40px;
+
+    /* padding: 15px; */
+}
+
+.cell {
+    border: solid 1px blueviolet;
+    box-sizing: border-box;
+    /* margin: 10px; */
+}
