@@ -1,0 +1,33 @@
+.flex-ct {
+    display: flex;
+    border: solid 2px black;
+}
+
+.box {
+    width: 130px;
+    height: 130px;
+    border: solid 1px tomato;
+
+    box-sizing: border-box;
+
+    flex-grow: 1;
+}
+
+.box.fit-content {
+    flex-basis: content;
+}
+
+.box.shrink-3 {
+    flex-shrink: 3;
+}
+
+.box.shrink-4 {
+    flex-shrink: 4;
+}
+
+@media (max-width: 800px) {
+    .flex-ct {
+        /* flex-direction: column; */
+        display: block;
+    }
+}
