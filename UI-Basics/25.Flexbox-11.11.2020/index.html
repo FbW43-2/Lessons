@@ -37,7 +37,25 @@
             <p>The rule <i>display: inline-block</i> is given to <strong>the items</strong>, not the container</p>
             
             <div class="section-inline-block">
-                <div class="square"></div>
+                <div class="square">
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+                    <div class="square-small"></div>
+
+                </div>
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
@@ -106,10 +124,13 @@
             
             <section>
                 <h3>Flexbox with different align-items</h3>
-                <div class="container-flex height-container">
+                <div class="container-flex tall-container align-items-center">
                     <div class="square height-s">Box 1 Lorem, ipsum dolor sit amet </div>
                     <div class="square height-l">Box 2</div>
                     <div class="square height-m">Box 3</div>
+
+                    <div class="square align-item-top">Box 4: flex-start</div>
+                    <div class="square align-item-bottom">Box 5: flex-end</div>
                 </div>
             </section>
 
@@ -124,7 +145,7 @@
             </section>
 
             <section>
-                <h3>Flexbox (rule on items): playing with <i>flex-grow</i></h3>
+                <h3>Flexbox (rule on items): playing with <i>flex-grow</i> and <i>order</i></h3>
                 <div class="container-flex items-grow">
                     <div class="square box-1">Box 1</div>
                     <div class="square box-2">Box 2</div>
@@ -152,6 +173,25 @@
                     <div class="square box-2">Box 2</div>
                     <div class="square box-3">Box 3 Box 3 Box 3 Box 3 Box 3 Box 3</div>
                     <div class="square box-4">Box 4</div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Centering text in a flexbox</h3>
+
+                <div class="square-big container-flex align-items-center">
+                    Text inside the big box Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum debitis cum quibusdam. Cumque quisquam inventore culpa cum voluptate minus nam!
+                </div>
+                
+                <h3>Centering text in a block</h3>
+                <div class="square-big block-center-text">
+                    Text
+                </div>
+
+                <h3>The perfect center: flexbox and margin</h3>
+                
+                <div class="square-big container-flex align-items-center">
+                    <div class="square center-margin"></div>
                 </div>
             </section>
 
