@@ -1,0 +1,121 @@
+.grid-container {
+    display: grid;
+    border: solid 1px black;
+
+    box-sizing: border-box;
+
+
+    gap: 5px 5px;
+
+    margin: 60px 0;
+}
+
+.grid-container .grid-item {
+    /* border: solid 1px blueviolet; */
+    background-color: blueviolet;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.section-grid-ex-1 > .grid-container {
+    /* grid-template-columns: 1fr 1fr minmax(300px, 3fr) 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* grid-template-rows: 70px 70px; */
+    grid-template-rows: repeat(3, 70px);
+
+    /* Aligns grid items horizontally within their cell */
+    /* justify-items: center; */
+    justify-items: stretch;
+    
+    /* Aligns grid items vertically within their cell */ 
+    align-items: stretch;
+
+    /* justify-content: right; */
+}
+
+.section-grid-ex-1 .grid-item.span-3c-1r {
+    background-color: brown;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.section-grid-ex-2 > .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 70px);
+    align-items: center;
+}
+.section-grid-ex-2 > .grid-container > .grid-item {
+    padding: 30px;
+}
+
+.section-grid-ex-2 .item-7 {
+    background-color: burlywood;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.section-grid-ex-4 .grid-item.item-7 {
+    background-color: green;
+}
+
+.grid-item.bg-green {
+    background-color: greenyellow;
+}
+
+.section-grid-ex-3 > .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 70px);
+
+    grid-template-areas: 
+        "header header header header sidebar"
+        "content content content content sidebar"
+        "content content content content sidebar"
+        "footer footer footer footer footer";
+}
+
+.grid-item.item-header {
+    grid-area: header;
+    background-color: lightskyblue;
+}
+
+.grid-item.item-sidebar {
+    grid-area: sidebar;
+    background-color: tomato;
+}
+
+.grid-item.item-sidebar-main {
+    grid-area: sidebar-main;
+    background-color: wheat;
+}
+
+.grid-item.item-footer {
+    grid-area: footer;
+    background-color: black;
+}
+
+.grid-item.item-content {
+    grid-area: content;
+}
+
+.section-grid-ex-4 > .grid-container {
+    /* Step 1 */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 70px);
+
+    /* Step 2: define an empty template (with dots) */
+    grid-template-areas: 
+    "sidebar-main header header header header header header"
+    "sidebar-main content content content content content sidebar"
+    "sidebar-main content content content content content sidebar"
+    "sidebar-main content content content content content sidebar"
+
+    "sidebar-main content content content content content sidebar"
+    "sidebar-main content content content content content sidebar"
+    "footer footer footer footer footer footer footer"
+    "footer footer footer footer footer footer footer"
+}

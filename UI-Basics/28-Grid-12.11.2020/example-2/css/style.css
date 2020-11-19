@@ -1,0 +1,35 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+}
+
+
+main {
+    padding-top: 60px;
+}
+
+footer {
+    background-color: #212121;
+}
+
+.side-nav-1 {
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    background-color: tomato;
+
+    position: sticky;
+    top: 20px;
+    left: 200px;
+    z-index: 34;
+}
+
+.back-to-top {
+    border-radius: 50%;
+    background-color: turquoise;
+    height: 100px;
+    width: 100px;
+    position: sticky;
+    top: 50px;
+}

@@ -1,0 +1,31 @@
+.items-container {
+    border: solid 1px black;
+}
+
+.item {
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+    background-color: peru;
+    margin: 10px;
+}
+
+.item.main {
+    background-color: mediumseagreen;
+}
+
+.pos-relative .main {
+    position: relative;
+    left: 290px;
+    top: 20px;
+}
+
+.pos-absolute .main {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.items-container {
+    position: relative;
+}
