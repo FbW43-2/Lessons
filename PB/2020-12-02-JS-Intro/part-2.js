@@ -81,7 +81,7 @@ nn3 = null;
 
 console.log(nn3 + 7);
 
-var ss1 = "Hola"
+var ss1 = "Hola";
 var ss2 = null;
 
 console.log(ss1 + ss2);
@@ -90,3 +90,5 @@ console.log(ss1 + ss2);
 // yet been assigned a value
 let var99;
 console.log(var99); // it will print undefined
+
+console.log(0 == null);
