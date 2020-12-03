@@ -75,7 +75,7 @@ var s2 = "Hello!";
 console.log(s1 == s2);
 
 // Nulls
-
+console.log("------------------ Part 6: Null vs undefined")
 var nn3 = 6;
 nn3 = null;
 
@@ -85,3 +85,8 @@ var ss1 = "Hola"
 var ss2 = null;
 
 console.log(ss1 + ss2);
+
+// undefined means a variable has been declared but has not 
+// yet been assigned a value
+let var99;
+console.log(var99); // it will print undefined
