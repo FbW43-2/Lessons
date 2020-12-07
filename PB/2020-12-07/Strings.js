@@ -22,6 +22,35 @@ Basic String Methods:
 
 
 let BookDescription = "this is a special \'title\' .  \n this is another sentence.";  
+let BookTitle="How to PHP in 24 minutes!              ";
+let BookTitle2="This is a self learnign book!";
+
+let StrMessageTest= BookTitle.trim()+BookTitle2;
+
+console.log(StrMessageTest);
+
+
+
+
+
+
+
+let FilterKey="javasCript";
+
+BookTitle=BookTitle.toLowerCase();
+FilterKey=FilterKey.toLowerCase();
+
+
+if (BookTitle.includes(FilterKey)==true){
+  // console.log("I want to buy this book!");
+}else{
+  //console.log(`I want a book about ${FilterKey}, not this one!!!`);
+}
+
+
+
+
+
 
 let Number1=14;
 let Number2=17;
@@ -31,13 +60,17 @@ let Number2=17;
 
 let Username = "TestUser";
 let EmailAddress = "TestUser@dci.org";
-let MobilePhoneNumber="017684954400";
+let MobilePhoneNumber="017684954401212121254654654654654656546546546546546fgddfgfdg55461";
 
 let Password="ABC123";
 
 // getting inputs from users
 
 let StrMessage;
+MobilePhoneNumber=MobilePhoneNumber.substring(0,12); // lastindex (11) +1  to include the last character ==> gives the first 12 chars
+
+//console.log(MobilePhoneNumber);
+
 
 if(MobilePhoneNumber.length!=12)
 {
@@ -55,7 +88,7 @@ if(MobilePhoneNumber.length!=12)
 //let LastIndex=Username.length-1;//8
 //console.log(LastIndex);
 
-let FirstChar = Username[0];
+let FirstChar = Username[2]; // Username.substring(2,3)
 let LastChar= Username[Username.length-1];
 
 //console.log(FirstChar+LastChar);
@@ -66,11 +99,22 @@ let LastChar= Username[Username.length-1];
 
 let UserInputPassword="abc123";
 
+/*
 if(Password.toUpperCase()==UserInputPassword.toUpperCase()){ // "ABC123"
   console.log("This is correct!");
 }else{
   console.log("This is incorrect!!!!!");
 }
+*/
+
+// -------------------------------------------------------------
+
+
+
+let StrSimpleMainString="Hello World!";
+
+let StrSimpleSubString=StrSimpleMainString.substring(0,2);
+//console.log(StrSimpleSubString);
 
 
 
