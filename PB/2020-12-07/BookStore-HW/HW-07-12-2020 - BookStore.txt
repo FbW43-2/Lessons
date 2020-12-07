@@ -1,0 +1,12 @@
+Create a simple BookStore app in JavaScript with the following properties:
+Title, Price, ISBN, quantity, year, author, publisher, description.
+
+
+Then you implement the following options for your BookStore app.
+
+0. Insert at least ten records
+1. Use Math.random for adding unique numbers (e.g., for ISBNs)
+2. Show all the records via a simple for loop
+3  Find the cheapest and most expensive book in your app via math functions
+4. Your app should be able to show specific records (aka books) with certain keywords in their title
+5. [This is optional] insert information to your array via a for loop
