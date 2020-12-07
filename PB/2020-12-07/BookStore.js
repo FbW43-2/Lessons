@@ -3,12 +3,15 @@
 
 
 
+/*  a simple array 
 let Cars = [
     1,
      555,
      64565465464
     ];
-console.log (Cars[2]);
+//console.log (Cars[2]);
+
+*/
 
 // An object must have properties
 
@@ -19,19 +22,15 @@ let Books =  [
 {BookTitle :"War of Art", Author : "Steven Pressfield", Price : 35.75, Quantity : 10000},
 {BookTitle :"Learning HTML in 21 Days!", Author : "Mohammadreza Ashouri", Price : 10, Quantity : 10000},
 {BookTitle :"Hack Your Network!", Author : "Bill Gates", Price : 12, Quantity : 4000},
-{BookTitle :"C++ Programming", Author : "Eugen", Price : 15, Quantity : 10000},
-{BookTitle :"How to Promote Your Songs", Author : "Heriberto", Price : 99, Quantity : 10000},
-{BookTitle :"Develope Your Own Web App in PHP", Author : "Raul", Price : 35.75, Quantity : 10000},
-{BookTitle :"Data Structures in Java", Author : "Elun Musk", Price : 100, Quantity : 40000}
-
 ];
 
 // For - Loop
 
 
+// I look for the cheapest book
 
-
-
+let CheapestBook= Math.min(Books[0].Price, Books[1].Price, Books[2].Price);
+console.log(CheapestBook);
 let StrMessage;
 
 
@@ -58,13 +57,8 @@ console.log("$"+Books[0].Price);
 */
 
 
-/*
-var cars = [
-    1,
-    "Volvo",
-    "BMW"
-  ];
-  */
+// Insert book information 
+
 
 
 

@@ -4,7 +4,7 @@ Number:
 - Combining strings and numbers with +
 - Integers vs. Floats
 - Converting strings into Numbers: `parseInt()`, `parseFloat()`
-- Using modulo
+- Using modulo  
 Math:
 - Rounding up with `Math.ceil()`
 - Rounding down with `Math.floor()`
@@ -28,6 +28,8 @@ let AccountBalance = "$99999"
 let TanCode;
 
 
+/*
+
 if(UserName=="Mo" && Password=="ABC123") // authentication 
 {
     TanCode=(Math.random()*1000); // generates a ßrandome number
@@ -50,3 +52,15 @@ if(InputTan==TanCode)
         console.log("Your TanCode is Wrong!");
     }
 
+
+    */
+
+//---------- using Math.ceil() and floor()
+
+let Price=35.00001;     // 35.000   35.34341  . . . 36
+//console.log(Math.ceil(Price));  // 36
+//console.log(Math.floor(Price)); //35
+
+
+// console.log(Math.max(2,4,454454,7777777, 999999999,1)); gives us th biggest number in the input collection
+//console.log(Math.min(2,4,454454,7777777, 999999999,1)); 
