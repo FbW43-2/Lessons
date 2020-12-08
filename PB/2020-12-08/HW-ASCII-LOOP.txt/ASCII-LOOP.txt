@@ -1,0 +1,9 @@
+- Write a simple JS program that takes an ASCII code and via a loop make the following pattern.
+
+*
+**
+***
+****
+*****
+******
+*******
