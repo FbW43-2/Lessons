@@ -1,0 +1,10 @@
+# Write a simple JS program that
+1- Takes an abstract (here it can be as small as one sentence), remove its author name (anonymization)
+2- Rejects those abstracts that include more than 10 words.
+++++++++++++++++++++++++++++++++++++++++
+Input:
+
+Author: Mo Ashouri, Abstract: Hi this is a fake abstract. Good luck!
+
+Output: Author: ### , Words Count= 7, Result: Accepted
+++++++++++++++++++++++++++++++++++++++++
