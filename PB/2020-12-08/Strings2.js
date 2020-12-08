@@ -26,18 +26,41 @@ split() method
 */
 
 
-let Company="Apple is a software company";
+
 //console.log(Company.replace("Apple","Microsoft"));
 
 //Company=Company.replace("Apple","Microsoft");
 
 
 
+/*
 // -------- String Concatination -----------
 console.log(Company + ", but is not the best one!");
 console.log(Company.concat(", but is not the best one!"));
 Company=Company.concat(", but is not the best one!");   // it returns  'Apple is a software company, but is not the best one!'
 console.log(Company);
+
+*/
+
+
+
+let strNews="Today's we are happy to annoucne that Apple has been chosen as the best software company in the world, Apple offers software with blockchain!";
+let strKeyword="Apple";
+
+let StartIndex = strNews.indexOf(strKeyword);
+let LastIndex = strNews.lastIndexOf(strKeyword);
+
+
+// Editor part
+
+let StrOutput=''; // This is a string
+for(let Index=(StartIndex+strKeyword.length); Index < LastIndex ; Index++)
+   {
+        StrOutput=StrOutput.concat(strNews.charAt(Index));
+       
+   }
+   console.log(StrOutput);
+
 
 
 
