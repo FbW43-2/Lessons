@@ -7,7 +7,7 @@ str.concat(text1, text2);
 The charAt() method returns the character at a specified index (position) in a string
 indexOf() returns the first occurrence of a specified text in a string
 var pos = str.indexOf("locate");
-using eval() to eval are treated as source code
+using eval() to eval are treated as source code 
 console.log(eval(s1))         // returns the number 4
 split() method
 
@@ -43,7 +43,7 @@ console.log(Company);
 */
 
 
-
+/*
 let strNews="Today's we are happy to annoucne that Apple has been chosen as the best software company in the world, Apple offers software with blockchain!";
 let strKeyword="Apple";
 
@@ -61,6 +61,33 @@ for(let Index=(StartIndex+strKeyword.length); Index < LastIndex ; Index++)
    }
    console.log(StrOutput);
 
+   */
+
+   
+
+   // using eval for executing JS commands inside of strings
+
+   let strJScode="console.log(";
+   let strJScodeZ= "'Console log is a function!');";
+   //eval(strJScode+strJScodeZ); // dynamic code generation
+
+
+
+   //----------Split in JS
+
+
+
+   // your essay must be limited to 50 words;
+   let strNews="Today's we are happy to annoucne that, Apple has been chosen as the best software company in the world, Apple offers software with blockchain!";
+   let ArrNews= strNews.split(" "); //delimiter 
+   console.log(ArrNews);
+
+        if(ArrNews.length<=50){
+             
+            console.log(`Your proposal is accepted because its length is ${ArrNews.length}`); // placeholder inside of backstick
+        }else{
+            console.log('Your submission must be less than 50 words!');
+        }
 
 
 
