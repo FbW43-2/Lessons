@@ -1,4 +1,4 @@
-// String concatenation
+    // String concatenation
 
 var str1 = "Helloo"
 var str2 = 'Helloo'
@@ -72,17 +72,3 @@ console.log(s1 !== s2);
 console.log(s3 === s2);
 console.log(s3 !== s2);
 
-
-
-// 1) call the database
-
-var person = {
-    name: "Jhonny"
-}
-
-
-if (person.name === "Daniel") {
-    console.log("Hello dude");
-} else {
-    console.log("Oh I don't know this guy...");
-}
