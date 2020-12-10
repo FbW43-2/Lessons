@@ -33,13 +33,21 @@ function numberEndsWith11(number) {
     return number % 100 === 11;
 }
 
+function numberEndsWith12(number) {
+    return number % 100 === 12;
+}
 
-// for (var index = 1; index <= DAYS_IN_DECEMBER; index++) {
-//     var result = numberEndsWith1(index);
+function numberEndsWith3(number) {
+    return number % 10 === 3;
+}
 
-//     console.log(`Does number ${index} end with 1? ${result}`);
-// }
+function numberEndsWith13(number) {
+    return number % 100 === 13;
+}
 
+function getOrdinalIndicator(day) {
+    
+}
 
 // for loop syntax: for(<starting index>, <stop condition>, <incremental step>)
 
@@ -55,14 +63,14 @@ for (var index = 1; index <= DAYS_IN_DECEMBER; index++) {
 
     } else if (numberEndsWith2(index)) {
 
-        if (index % 100 === 12)  // if the number ends with 12
+        if (numberEndsWith12(index))
             ordinalIndicator = index + 'th';
         else
             ordinalIndicator = index + 'nd';
 
-    } else if (index % 10 === 3) { // if the number ends with 3
+    } else if (numberEndsWith3(index)) {
 
-        if (index % 100 === 13)  // if the number ends with 13
+        if (numberEndsWith13(index))
             ordinalIndicator = index + 'th';
         else
             ordinalIndicator = index + 'rd';
@@ -71,20 +79,38 @@ for (var index = 1; index <= DAYS_IN_DECEMBER; index++) {
         ordinalIndicator = index + 'th';
     }
 
-    console.log(`Today is December, the ${ordinalIndicator} of the year 2020`);
+    var action;
+
+    if (index >= 3 && index <= 8) { // from the 3rd to the 8th, I go to school
+        action = "I go to school";
+    } else if (index >= 13 && index <= 15 ) { // from the 13th to the 15th, I get drunk on Javascript
+        action = "I get drunk on javascript";
+    } else if (index >= 23 && index <= 27) { // 23rd to the 27th, I'm in Lepizig visit my cousins for Christmas
+        action = "I'm in Lepizig visit my cousins for Christmas"
+    } else {
+        action = "I sleep";
+    }
+
+    console.log(`Today is December, the ${ordinalIndicator} of the year 2020. Today, ${action}`);
 }
 
 
-    // Method 1: mathematical way
-    // Ex 1: 6662712721 % 10 = 1
-    // Ex 2: 89127312755 % 10 = 5
-    // Ex 3: 4 % 10 = 4
-    // index % 10
+// for (var index = 1; index <= DAYS_IN_DECEMBER; index++) {
+//     var result = numberEndsWith1(index);
 
-    // Method 2: string/array way 
-    // Ex 1: 1235 -> '1235' -> ['1', '2', '3', '5'] -> '5' -> 5
-    // Ex 2: 5 -> '5' -> ['5'] -> '5' -> 5
-    // parseInt(index.toString().split('').pop())
-    
-    // Method 3: string way 1235 -> '1235' -> '5' -> 5
-    // parseInt(index.toString().charAt(-1))
+//     console.log(`Does number ${index} end with 1? ${result}`);
+// }
+
+// Method 1: mathematical way
+// Ex 1: 6662712721 % 10 = 1
+// Ex 2: 89127312755 % 10 = 5
+// Ex 3: 4 % 10 = 4
+// index % 10
+
+// Method 2: string/array way 
+// Ex 1: 1235 -> '1235' -> ['1', '2', '3', '5'] -> '5' -> 5
+// Ex 2: 5 -> '5' -> ['5'] -> '5' -> 5
+// parseInt(index.toString().split('').pop())
+
+// Method 3: string way 1235 -> '1235' -> '5' -> 5
+// parseInt(index.toString().charAt(-1))
