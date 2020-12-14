@@ -1,0 +1,2 @@
+// extract the language name from a given URL and shows a welcome message in that language.
+// For instance, a given URL is : http://DCI.org/@german     --> herzlich willkommen bei DCI   , when there is no input default language English
