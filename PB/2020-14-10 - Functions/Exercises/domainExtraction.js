@@ -42,4 +42,7 @@ function WelcomeMessage(strURL){
 //------------------------- main code-------
 
 
-console.log(WelcomeMessage("http://DCI.org/@german"));
+//console.log(WelcomeMessage("http://DCI.org/@german"));
+
+let Language="German";
+console.log(Language.slice(1));

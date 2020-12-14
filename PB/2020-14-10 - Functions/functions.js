@@ -23,6 +23,9 @@ function CharCount(strInput)
 }
 
 
+function SQL(intInp){ return intInp*intInp;}
+
+
 //----------------------------------- end of function declarations  -------------------
 
 
