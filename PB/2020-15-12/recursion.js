@@ -29,7 +29,7 @@ function countDownRecursive(number)
 // n! = n* (n-1)!  ==>   4! = 4 * 3 * 2   =24   
 
 
-function Factorial1(number) //4
+function Factorial1(number) // iterative solution
 {
     let intFactorial=number;
     for(let index=number-1 ; index > 1 ; index--) // index=2, 1
@@ -41,8 +41,15 @@ function Factorial1(number) //4
 }
 
 
-function FactorialRecusrive(number)
+function FactorialRecursive(n)  // recusive solution 
 {
+
+    //   //   n!= n * (n-1)!   0 = 1
+
+    if(n==0)
+       return 1;
+    else 
+       return n * FactorialRecursive(n-1);
 
 }
 
@@ -54,4 +61,4 @@ function FactorialRecusrive(number)
 
 //countDownRecursive(5);
 
-console.log(Factorial1(5));
+console.log(FactorialRecursive(5));
