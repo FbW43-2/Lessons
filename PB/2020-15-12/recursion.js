@@ -41,7 +41,8 @@ function Factorial1(number) // iterative solution
 }
 
 
-function FactorialRecursive(n)  // recusive solution 
+
+function FactorialRecursive (n)  // recusive solution     function
 {
 
     //   //   n!= n * (n-1)!   0 = 1
@@ -54,11 +55,37 @@ function FactorialRecursive(n)  // recusive solution
 }
 
 
+let FactorialRecursiveExpression = function (n)  //   function expression
+{
+
+    //   //   n!= n * (n-1)!   0 = 1
+
+    if(n==0)
+       return 1;
+    else 
+       return n * FactorialRecursiveExpression(n-1);
+
+}
+
+let FactorialRecursiveArrow = (n) =>  //    arrow function  ES6
+{
+
+    //   //   n!= n * (n-1)!   0 = 1
+
+    if(n==0)
+       return 1;
+    else 
+       return n * FactorialRecursiveArrow(n-1);
+
+}
+
+
 
 
 //-------------------------------------------
 
 
 //countDownRecursive(5);
-
-console.log(FactorialRecursive(5));
+let inputNumber=7;
+if(inputNumber>0)
+    console.log(`The factorial of ${inputNumber} is  ${FactorialRecursive(inputNumber)}`);
