@@ -11,17 +11,26 @@ function countDown1(number){
 }
 
 
+
+
+  // input => 3      3,2,1
+
+// for 
+// function(3) = function (2)
+
+
+
+
+
 // countDown in recursive mode   
 
 function countDownRecursive(number)
 {
-     console.log(number);
-     
-     const constNumber=number -1   // using const make your code more stable, specially on the old JS engines
-    // number=number-1; //number--
-    // stop condition
-     if(constNumber>0)
-       countDownRecursive(constNumber)
+     console.log(number);  
+     number=number-1; 
+ 
+     if(number>0)
+       countDownRecursive(number)
 }
 
 
@@ -79,6 +88,22 @@ let FactorialRecursiveArrow = (n) =>  //    arrow function  ES6
 
 }
 
+/*
+
+The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+
+*/
+
+function Fibonacci(number){
+
+    if(number<2)
+       return number;
+    else 
+       return Fibonacci(number-1)+Fibonacci(number-2);
+       
+}
+
 
 
 
@@ -88,4 +113,9 @@ let FactorialRecursiveArrow = (n) =>  //    arrow function  ES6
 //countDownRecursive(5);
 let inputNumber=7;
 if(inputNumber>0)
-    console.log(`The factorial of ${inputNumber} is  ${FactorialRecursive(inputNumber)}`);
+    //console.log(`The factorial of ${inputNumber} is  ${FactorialRecursive(inputNumber)}`);
+
+for(let Index=0;Index<20; Index++) 
+    console.log(Fibonacci(Index));
+
+
