@@ -16,7 +16,7 @@
           
 
 
-            <input type="text" id="text1" >
+            <input type="text" id="text1">
             <input type="text"  id="text2" > 
             
 
@@ -28,7 +28,12 @@
 
         <script> 
 
+        document.getElementById("text1").addEventListener("keyup", Mirror);
+        function Mirror(){
 
+           let varKey=document.getElementById("text1").value;
+           document.getElementById("text2").value= varKey;
+        }
         
         </script>
 
