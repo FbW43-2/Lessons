@@ -20,15 +20,20 @@ class Door {
         
     }
 
+    ChangeColor(userColor){
+        this.color=userColor;
+    }
+
     // constructor method 
 
-    constructor(){ // it automatically executes when you create an object from this class
+    constructor(userWidth,userHeight,userColor,userState){ // it automatically executes when you create an object from this class
+
 
         console.log("You created a default door!");
-        this.width=100; //cm 
-        this.height=200;
-        this.color="white";
-        this.state="open";
+        this.width=userWidth;
+        this.height=userHeight;
+        this.color=userColor;
+        this.state=userState;
 
     }
 
@@ -39,22 +44,22 @@ class Door {
 //-----------------------------
 
 
-let houseDoor= new Door(); // initialized an object , create an instance of the Door class
 
 
-console.log(houseDoor.width); 
-console.log(houseDoor.height); 
-console.log(houseDoor.color); 
-console.log(houseDoor.state); 
+//blackbox 
+
+let houseDoor= new Door(100,400,"green","close"); // initialized an object , create an instance of the Door class
+
+console.log(houseDoor.width);
+console.log(houseDoor.height);
+console.log(houseDoor.color);
+console.log(houseDoor.state);
+
+houseDoor.ChangeColor("purple");
+console.log(houseDoor.color);
 
 
-houseDoor.color="blue";
-houseDoor.width=150;
-houseDoor.height=250;
-houseDoor.close();
 
-console.log(houseDoor.width); 
-console.log(houseDoor.height); 
-console.log(houseDoor.color); 
-console.log(houseDoor.state); 
+
+
 
