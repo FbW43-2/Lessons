@@ -55,7 +55,7 @@ i           result
 
 */
 function sumIntFrom1ToN(number) {
-    var result = 4;
+    var result = 0;
 
     for (var i = 1; i <= number; i++) {
         result += i; // result = result + i
@@ -63,6 +63,46 @@ function sumIntFrom1ToN(number) {
     return result;
 }
 
+// console.log(sumIntFrom1ToN(4))
+// console.log(sumIntFrom1ToN(13))
+// console.log(sumIntFrom1ToN(600))
 
-if (sumIntFrom1ToN(13) !== 91) throw Error("Function should evaluate to 91")
-if (sumIntFrom1ToN(6) !== 21) throw Error("Function should evaluate to 21")
+// Cubed. Create a function that takes in three numbers and returns the sum of its cubes.
+// Examples:
+// sumOfCubes(1, 5, 9) ➞ 855 // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
+// sumOfCubes(2) ➞ 8
+// sumOfCubes() ➞ 0
+
+function exponent(x, y) {
+    var result = 1;
+    for (var i = 1; i <= y; i++) {
+        result *= x
+    }
+    return result;
+}
+
+function sumOfCubes(n1 = 0, n2 = 0, n3 = 0) {
+    return exponent(n1, 3) + exponent(n2, 3) + exponent(n3, 3);
+}
+
+console.log(sumOfCubes(1, 5, 9));
+console.log(sumOfCubes(2));
+console.log(sumOfCubes());
+
+
+function sumOfCubes2(...numbers) {
+    let cube = (x) => exponent(x, 3);
+
+    let sum = 0;
+
+    for (let index = 0; index < numbers.length; index++) {
+        sum += cube(numbers[index]);
+    }
+
+    return sum;
+}
+
+
+console.log(sumOfCubes2());
+console.log(sumOfCubes2(2, 4));
+console.log(sumOfCubes2(2, 4, 5, 2, 1, 3, 5, 2, 1, 2, 6));
