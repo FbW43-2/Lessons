@@ -51,6 +51,19 @@ class PlanetarySystem extends SpaceObject {
     }
 }
 
+class Metorite {
+
+}
+
+class Satellite extends SpaceObject {
+
+}
+
+class Moon extends Satellite {
+
+}
+
+
 // ------ Main program
 
 var star = new Star("Sun");
