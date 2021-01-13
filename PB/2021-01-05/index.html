@@ -1,0 +1,101 @@
+<html>
+
+    <head>
+
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">    
+    <title>DOM and JS</title>
+
+    
+       
+
+    </head>
+
+
+         <body>
+
+            <h1 id="one">Welcome</h1>
+            <p> This is the welcome message!</p>
+            <h2 id="two"> JavaScript!</h2>
+
+            <p> This is a cool programming language! </p>
+            <p> This is a cool programming language! </p>
+            <p> This is a cool programming language! </p>
+            <p> This is a cool programming language! </p>
+
+
+            <input type="text"  class="testclass">
+            <input type="text"  class="testclass">
+            <input type="text" class="testclass">
+            <input type="text" class="testclass">
+
+
+         
+        </body>
+
+        <script> 
+
+
+         let varP= document.getElementsByTagName("p");// this method returns an array of html elements , varP[0], varP[1], ....varP[n]
+         varP[2].innerHTML="This a warning message!";
+
+
+
+         let varClass=document.getElementsByClassName("testclass");
+         document.getElementById("")
+
+         for(let index=0; index < varClass.length; index++)
+         { 
+
+            varClass[index].addEventListener("keypress",Special);
+             
+         }
+
+         function Special(){
+                alert("This is an array of testclass objects!");
+         }
+
+
+
+
+
+
+
+
+         
+
+
+
+ /*
+
+        document.getElementById("one").addEventListener("click",Warning); // that allows you to assign a function to an event for that html object!
+       
+        function Warning(){
+
+            alert("This is a warning message!");
+        }
+
+         
+        document.getElementById("three").addEventListener("keypress",Warning);
+
+
+        document.getElementById("two").onclick=function(){ //anonymous functions
+             
+            alert("this is another warninig message!");
+
+        }
+
+
+       */ 
+
+
+         
+
+
+        
+
+        
+        </script>
+
+    
+
+</html>
