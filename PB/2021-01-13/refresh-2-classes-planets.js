@@ -2,7 +2,8 @@
 Create a planet class like this one 
 Make sure it has the properties: name, diameter (in km), color
 Create 8 instances of planets (use the properties of our solar system)
- */
+When you create a planet, print it's properties (in the constructor) 
+*/
 class Planet {
     constructor(planetName) {
         this.name = planetName;
@@ -10,8 +11,18 @@ class Planet {
 }
 
 class Star {
+    planetarySystem = null;
+
     constructor(starName) {
         this.name = starName;
+    }
+
+    updateSystem(system) {
+        if (this.planetarySystem !== null) {
+            throw new Error("This sun has already been assigned to a system");
+        }
+
+        this.planetarySystem = system;
     }
 }
 
@@ -22,6 +33,7 @@ class PlanetarySystem {
     constructor(name, star) {
         this.name = name;
         this.star = star;
+        this.star.updateSystem(this);
     }
 }
 
@@ -30,32 +42,11 @@ class PlanetarySystem {
 var star = new Star("Sun");
 
 var system1 = new PlanetarySystem("Solar System", star);
-var system2 = new PlanetarySystem("Palomar I", star); // Here, we want our program to crash / throw an error!
+console.log(`The sun's planetary system is ${star.planetarySystem.name}`);
 
-console.log(`System ${system1.name}. Star: ${system1.star.name}`);
-console.log(`System ${system2.name}. Star: ${system2.star.name}`);
-
-
+var system2 = new PlanetarySystem("Palomar I", star);
+console.log(`The sun's planetary system is ${star.planetarySystem.name}`);
 
 
-
-
-
-
-
-
-
-
-
-// var p1 = new Planet("Earth");
-// var p2 = new Planet("Mercury");
-// var p3 = new Planet("Mars");
-
-// var planets = [p1, p2, p3];
-
-
-
-// console.log(`The sun's planetary system is: ${star.planetarySystem}`);
-
-
-// var system2 = new PlanetarySystem("Palomar I", new Star("Palomar Star"));
+// Here, we want our program to crash / throw an error, because two solar systems cannot share the same sun
+// How do we plan to do this? We make sure that the star is linked to only one planetary system

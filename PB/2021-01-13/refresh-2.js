@@ -1,6 +1,14 @@
 
-var i1 = i2;
-console.log(i1);
+class NumberBox {
+    // a class the simply contains a number
+    constructor(number) {
+        this.number = number;
+    }
+}
 
-var i2 = i1;
-console.log(i2);
+
+var box = new NumberBox(i); 
+
+var i = 10;
+
+console.log(box.number);
