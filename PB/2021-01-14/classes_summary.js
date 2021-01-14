@@ -18,10 +18,11 @@ class Dog extends Animal {
 }
 
 class Person extends Animal {
-    dog = null;
+    // dog = null; (A)
 
     constructor(firstName, lastName) {
        super(firstName + ' ' + lastName);
+       this.dog = null; // (B) this is pretty much the same as (A)
     }
 
     // This is a member function
