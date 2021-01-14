@@ -17,8 +17,26 @@ class Galaxy extends SpaceObject {
 
     displayGalaxy() {
         console.log(`Galaxy name: ${this.name}`);
+        console.log(`Number of systems: ${this.systems.length}`);
         console.log("Displaying planetary systems:");
-        console.log(this.systems);
+
+        for (var s of this.systems)
+            s.print();
+    }
+
+    destroyPlanetarySystem(system) {
+        const index = this.systems.indexOf(system);
+
+        // if indexOf returns -1, it means that the element is not part
+        // of the array
+        if (index < 0) {
+            console.log(`The system ${system.name} is not part of this galaxy. Nothing will happen`);
+            return;
+        }
+
+        // this removes the system from the array
+        const removedElement = this.systems.splice(index, 1);
+        removedElement[0].destroy();
     }
 }
 
@@ -39,6 +57,17 @@ class PlanetarySystem extends SpaceObject {
             p.addReferenceToSystem(this);
 
         this.planets = planets;
+    }
+
+    destroy() {
+        // destroy sun, planets, ...
+        console.log(`Destroying system ${this.name}`);
+    }
+
+    print() {
+        console.log(`System name: ${this.name}`);
+        console.log(`Number of planets: ${this.planets.length}`);
+        console.log(this.planets);
     }
 }
 
@@ -72,14 +101,18 @@ class Star extends PlanetarySystemBody {
 
 class Planet extends PlanetarySystemBody {
     
-    constructor(positionFromStar, satellites, planetName) {
+    constructor(satellites, planetName) {
         super(planetName);
-        this.positionFromStar = positionFromStar;
+        
         this.satellites = satellites;
     }
 
     getSun() {
         return this.planetarySystem.star;
+    }
+
+    getPositionFromStar() {
+        return this.planetarySystem.planets.indexOf(this);
     }
 }
 
@@ -107,28 +140,42 @@ class Machine extends Satellite {
 
 var galaxy = new Galaxy("Milky way");
 
+var p1 = new Planet([], "FunkyPlanet");
+
 var system1 = new PlanetarySystem(
     new Star("Sun"), 
     [
-        new Planet(0, [], "Earth"), 
-        new Planet(1, [], "Planet-1")
+        new Planet([], "Earth"),
+        p1,
+        new Planet([], "Planet-1")
     ], 
     "Solar System"
 );
 
 var system2 = new PlanetarySystem(
     new Star("Orion"), 
-    [new Planet(0, [], "Obj-34")], 
+    [new Planet([], "Obj-34")], 
     "M12"
+);
+
+var system3 = new PlanetarySystem(
+    new Star("Star-1"),
+    [new Planet([], "Planet10")],
+    "Sys-Admin"
 );
 
 galaxy.addPlanetarySystem(system1);
 galaxy.addPlanetarySystem(system2);
 
 // 2) Print the galaxy
-
+console.log("------------------------------------------");
 galaxy.displayGalaxy();
 
 // 3) Simulate destruction
+console.log("------------------------------------------");
+galaxy.destroyPlanetarySystem(system3);
+galaxy.destroyPlanetarySystem(system2);
 
 // 4) Print the remaining galaxy again
+console.log("------------------------------------------");
+galaxy.displayGalaxy();
