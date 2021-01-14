@@ -42,17 +42,21 @@ class PlanetarySystem extends SpaceObject {
     }
 }
 
-class Star extends SpaceObject {
-
+/**
+ * Direct bodies of a Planetary System.
+ * Objects extending this class have a reference to the system they belong to.
+ */
+class PlanetarySystemBody extends SpaceObject {
+    
     planetarySystem = null;
 
-    constructor(starName) {
-        super(starName);
+    constructor(bodyName) {
+        super(bodyName);
     }
 
     addReferenceToSystem(system) {
         if (this.planetarySystem !== null)
-            throw Error(`The star ${this.name} already has a system assigned. 
+            throw Error(`The object ${this.name} already has a system assigned. 
                 The system is ${this.planetarySystem.name}. 
                 The system we were trying to assign now is ${system.name}`);
         
@@ -60,19 +64,18 @@ class Star extends SpaceObject {
     }
 }
 
-class Planet extends SpaceObject {
+class Star extends PlanetarySystemBody {
+    constructor(starName) {
+        super(starName);
+    }
+}
 
-    planetarySystem = null;
-
+class Planet extends PlanetarySystemBody {
+    
     constructor(positionFromStar, satellites, planetName) {
         super(planetName);
         this.positionFromStar = positionFromStar;
         this.satellites = satellites;
-    }
-
-    addReferenceToSystem(system) {
-        // TODO: add check here later...
-        this.planetarySystem = system;
     }
 
     getSun() {
@@ -104,25 +107,23 @@ class Machine extends Satellite {
 
 var galaxy = new Galaxy("Milky way");
 
-var star1 = new Star("Sun");
-var planet1 = new Planet(1, [], "Planet-1");
-
 var system1 = new PlanetarySystem(
-    star1, 
-    [new Planet(0, [], "Earth"), planet1], 
+    new Star("Sun"), 
+    [
+        new Planet(0, [], "Earth"), 
+        new Planet(1, [], "Planet-1")
+    ], 
     "Solar System"
 );
 
 var system2 = new PlanetarySystem(
-    star1, 
-    [new Planet(0, [], "Obj-34"), planet1], 
+    new Star("Orion"), 
+    [new Planet(0, [], "Obj-34")], 
     "M12"
 );
 
 galaxy.addPlanetarySystem(system1);
 galaxy.addPlanetarySystem(system2);
-
-
 
 // 2) Print the galaxy
 
