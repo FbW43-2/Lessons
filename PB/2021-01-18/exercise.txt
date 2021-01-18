@@ -5,6 +5,6 @@ Create a stack data structure via Class in JavaScript so that it comprises the f
 > Returning the length of the stack
 > Returning the last element on top of the stack (i.e., without removing it)
 > Printing all existing elements inside of the stack
-> Printing all elements of the stacks from BOTTON to TOP (i.e., in the FIFO manner this time)
+> Printing all elements of the stacks from BOTTOM to TOP (i.e., in the FIFO manner this time)
 
 */
