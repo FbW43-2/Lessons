@@ -1,0 +1,8 @@
+/*
+
+
+Create a queue with the help of stack classes
+Note: In your queue class you need to use inheritance 
+
+
+*/
