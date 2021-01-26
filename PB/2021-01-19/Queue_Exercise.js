@@ -7,3 +7,5 @@ Create a queue with Class in Javascript with the following methods:
 3-  Replace all existing elements of the queue with the method argument
 
 */
+
+
