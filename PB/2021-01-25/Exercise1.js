@@ -87,6 +87,18 @@ class Linkedlist {
     }
 
 
+    InsertNodeHead(_data){ // newnode = 0
+
+         // 1 -> 2 - > 3 ->4
+
+          let newNode=new Node(_data); // create a new node with data =0
+          newNode.next=this.head; // [0] ->  1 -> 2 - > 3 ->4
+
+          this.head=newNode; // the new node is now the head 
+
+    }
+
+
 
     InsertNode(_data){ // insert after the tail node
 
@@ -118,14 +130,12 @@ class Linkedlist {
 
       let CurrentNode=this.head;
 
-      while(CurrentNode !=null){
+      while(CurrentNode != null){
           
           console.log(CurrentNode.data); // print
           CurrentNode=CurrentNode.next;
 
       }
-
-
     }
 
 
@@ -169,9 +179,6 @@ class Linkedlist {
         this.head=null; // if yes -> remove it
     }else{
 
-
-
-
             while(CurrentNode !=null){
                 
                 
@@ -207,5 +214,11 @@ myLinkedlist.InsertNode(4);
 
 myLinkedlist.PrintAll();
 console.log('---------------------');
-myLinkedlist.RemoveNode(3);
+
+
+myLinkedlist.InsertNodeHead(0);
+
 myLinkedlist.PrintAll(); // to show whether we could remove the node (3)  properly
+
+
+
