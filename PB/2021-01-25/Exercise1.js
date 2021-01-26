@@ -159,6 +159,39 @@ class Linkedlist {
 
 
 
+
+    RemoveNode(_data){
+
+
+    let CurrentNode=this.head; // we start from the head node
+
+    if(this.head.data == _data){ // check whether the head node is our target node
+        this.head=null; // if yes -> remove it
+    }else{
+
+
+
+
+            while(CurrentNode !=null){
+                
+                
+                            if(CurrentNode.next.data== _data){ // we find the target node is the next one
+                                // now it's time to remove the node
+
+                                CurrentNode.next=CurrentNode.next.next;
+                                break; // get out of the while block
+
+                            }
+                            
+                CurrentNode=CurrentNode.next; // moving to the next node until we find the target node for removing 
+            }
+
+    }
+
+    }
+
+
+
 }
 
 
@@ -174,4 +207,5 @@ myLinkedlist.InsertNode(4);
 
 myLinkedlist.PrintAll();
 console.log('---------------------');
-myLinkedlist.PrintAllReverse();
+myLinkedlist.RemoveNode(3);
+myLinkedlist.PrintAll(); // to show whether we could remove the node (3)  properly
