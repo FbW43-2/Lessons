@@ -62,3 +62,65 @@ const nonUniqueValues5 = (arr) => {
 const nonUniqueValues6 = (arr) => arr.filter((el) => arr.indexOf(el) === arr.lastIndexOf(el));
 
 console.log(nonUniqueValues6([1, 1, 1, 2, 2, 2, 3, 4]));
+
+// --------------------------------------------------------------------------------------
+
+function commonOccurences0(arr1, arr2) {
+    let retArr = [];
+
+    for (var el of arr1) {
+        if (arr2.includes(el)) 
+            retArr.push(el);
+    }
+
+    return retArr;
+}
+
+console.log(commonOccurences0([1, 2, 3, 4, 5, 6, 9, 10, 11, 12], [3, 5, 7, 11, 13])); // should print out [3, 5, 11]
+
+const commonOccurences1 = (arr1, arr2) => {
+    let retArr = [];
+
+    for (var el of arr1) {
+        if (arr2.includes(el)) 
+            retArr.push(el);
+    }
+
+    return retArr;
+}
+
+const commonOccurences2 = (arr1, arr2) => {
+    function testFunction(el) {
+        return arr2.includes(el)
+    }
+    
+    let retArr = arr1.filter(testFunction);
+
+    return retArr;
+}
+
+const commonOccurences3 = (arr1, arr2) => {
+    function testFunction(el) {
+        return arr2.includes(el)
+    }
+    
+    return arr1.filter(testFunction);
+}
+
+const commonOccurences4 = (arr1, arr2) => {
+    return arr1.filter(function testFunction(el) {
+        return arr2.includes(el)
+    });
+}
+
+const commonOccurences5 = (arr1, arr2) => {
+    return arr1.filter((el) => {
+        return arr2.includes(el)
+    });
+}
+
+const commonOccurences6 = (arr1, arr2) => {
+    return arr1.filter((el) => arr2.includes(el));
+}
+
+const commonOccurences7 = (arr1, arr2) => arr1.filter((el) => arr2.includes(el));
