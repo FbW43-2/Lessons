@@ -15,3 +15,5 @@ for (var bt of buttons) {
         console.log(`You clicked on button: ${ev.target.innerText}`);
     });
 }
+
+
