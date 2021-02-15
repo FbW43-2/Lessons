@@ -1,0 +1,10 @@
+1) What is JavaScript?
+2) Introduce some of the advantages of JavaScript
+3) Name some of the disadvantages of JavaScript
+4) How to use external JavaScript file?
+5) Introduce JavaScript Data Types?
+6) What is the difference between JavaScript, JScript, and ECMAScript?
+7) What is the difference between a function and a class?
+8) How to validate email in JavaScript?
+9) How to validate a strong password in JavaScript?
+10) Name a few JavaScript Engines? Which one is the fastest?
