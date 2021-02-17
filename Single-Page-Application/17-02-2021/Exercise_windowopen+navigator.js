@@ -1,5 +1,6 @@
 /*
 
+EXERCISE:
 
 Make a webpage that contains a button.
 1- When a visitor clicks on the button a new small window opens
