@@ -1,0 +1,38 @@
+<html>
+
+<body>
+
+
+    <input type="text" id="sameprice" placeholder="sameprice"></br>
+    <input type="text"  id="discount"  placeholder="discount">
+    <input type="button" onclick="popup()" value="show the discount!">
+
+</body>
+
+
+<script>
+
+
+function popup(){
+
+            let sameprice=document.getElementById("sameprice").value;
+            let discount=document.getElementById("discount").value;
+            let result="$("+parseInt(sameprice*discount)+") off!" ; // 100 * 0.5 = 50
+
+            let left = (screen.width/2)-(500/2);
+            let top = (screen.height/2)-(500/2);
+
+            let win= window.open("popup.html", "", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+500+', height='+500+', top='+top+', left='+left);
+            
+            if(win.document){
+
+                win.document.write(result) ; // dynamic text 
+            }
+
+}
+
+
+</script>
+
+
+</html>
