@@ -1,0 +1,37 @@
+<html>
+    <body>
+
+     <p id="parent">
+        With <b id="child">Bubbling</b>, the event is first captured and handled by the innermost element and then propagated to outer elements. 
+        With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+     </p>     
+    </body>
+
+
+<script>
+
+ let parent=document.getElementById("parent"); // a reference to the parent id , i.e., the P tag
+ let child = document.getElementById("child"); // a reference to the child id, i.e., the B tag     
+  
+ parent.addEventListener("click",clickParent); // register an event handler to Click on Parent , by default(false ) we have the Bubbling mode
+ child.addEventListener("click",clickChild);// to enable the capturing mode /true
+
+
+
+    function clickParent(){
+       
+        console.log("I am the parent!");
+
+    }
+
+    function clickChild(e){
+
+
+        console.log("I am the child!");
+        e.stopPropagation();
+
+    }
+
+
+</script>
+</html>
