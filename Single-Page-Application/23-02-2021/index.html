@@ -1,0 +1,95 @@
+<html>
+<!-- 1. Manipulate DOM objects style in JavaScript-->
+<!-- 2. Create DOM objects dynamically in JavaScript-->
+<!-- 3. How to use QuerySelector() in JavaScript to make references--->
+<!-- 4. How to use QuerySelectorAll() in JavaScript to make references for multiple elements--->
+
+
+
+    <body>
+
+      <h2 id="h2object"> This is a simple header text!</h2>
+      <button onclick="changeStyle()">Change the style!</button>
+      <h2> How to create DOM objects in JavaScript</h2>
+      <button onclick="Copy()">Copy Me!</button>
+
+      <h1> Catch me by QuerySelector!</h1>
+      <button onclick="StyleQuerySelector()">Change my style!</button>
+
+
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+
+      <button onclick="StyleQuerySelectorAll()">Change all h6 styles!</button>
+
+
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+      <h6> Catch me by QuerySelectorALL!</h6>
+
+
+
+
+ 
+
+
+
+
+        
+    </body>
+
+    <script>
+
+      function changeStyle(){
+           document.getElementById("bodytest").style.color="green";
+    
+      }
+
+      function Copy(){
+
+        let btn=document.createElement("button");
+        btn.innerText="Copy ME";
+        document.body.appendChild(btn);
+
+      }
+
+      function StyleQuerySelector(){
+          
+       document.querySelector("h1").style.color="blue"; // it returns the first element of its given HTML tag, i.e., we do not need to have Id. name, or class here to catch the element!
+    
+      }
+
+
+      function StyleQuerySelectorAll(){
+
+         let queryAll;
+         queryAll=document.querySelectorAll("h6"); // get an array of h6 objects
+
+                for(let index=0; index < queryAll.length; index++){
+                    queryAll[index].style.color="red";
+                }
+      }
+
+    </script>
+
+
+</html>
