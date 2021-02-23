@@ -14,13 +14,10 @@ Exercise 2:
 Create a registration form with the following features:
 1- your form must take common user information such as first name, family name, phone number, email, password, etc.
 2- when a user focuses on each input the background color of that input must turn to yellow.
-3- You need to control the first name and family name are shown with capital letters. 
+3- You need to control  firstname and familyname are shown with capital letters. 
 4- Check the email and phone numbers with regex to make sure they are entered in the right format.
 5- Before a user can send her registration form, you must control the inputs in terms of emptiness.
 
 
 */
-
-
-
 

@@ -1,0 +1,54 @@
+
+<html>
+    <head>
+      
+      </head>
+    <body>
+<div class="log-form">
+  <h2>Login to your account</h2>
+  <form>
+    <input type="text" title="username" placeholder="username" />
+    <input type="password" title="username" placeholder="password" />
+    <button type="submit" class="btn" text="login">Login</button>
+    <a class="forgot" href="#">Forgot Username?</a>
+  </form>
+</div><!--end log form -->
+</body>
+
+<script>
+
+function login(){
+
+
+    let username=window.prompt("enter the username");
+    let password=window.prompt("enter the password");
+
+    if(username=="admin" && password=="123"){
+
+        alert("Welcome!");
+    }else{
+
+        alert("Wrong!");
+        
+        if(window.confirm("Do you want to try it again?")){
+
+            username=window.prompt("enter the username");
+            password=window.prompt("enter the password");
+            if(username=="admin" && password=="123")
+              alert("Welcome!");
+            else
+              alert("Wrong!");
+               
+
+        }
+
+    }
+
+}
+
+
+</script>
+</html>
+
+
+

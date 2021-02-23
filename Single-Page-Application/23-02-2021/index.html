@@ -3,6 +3,8 @@
 <!-- 2. Create DOM objects dynamically in JavaScript-->
 <!-- 3. How to use QuerySelector() in JavaScript to make references--->
 <!-- 4. How to use QuerySelectorAll() in JavaScript to make references for multiple elements--->
+<!-- 5. InnderText / InnerHTML in JavaScript -->
+
 
 
 
@@ -27,32 +29,8 @@
       <button onclick="StyleQuerySelectorAll()">Change all h6 styles!</button>
 
 
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-      <h6> Catch me by QuerySelectorALL!</h6>
-
-
-
-
- 
-
-
-
+      <h2> How to use InnderText & innerHTML !</h2>
+      <button onclick="ChangeMyText()" id="btntest">I am a Button!</button>
 
         
     </body>
@@ -87,6 +65,13 @@
                 for(let index=0; index < queryAll.length; index++){
                     queryAll[index].style.color="red";
                 }
+      }
+
+      function ChangeMyText(){
+
+        //document.getElementById("btntest").innerText="I am a super <b>Button!</b>";
+        document.getElementById("btntest").innerHTML="I am a super <b>Button!</b>"; // be careful about the XSS attack
+      //  document.write("<script>alert('XSS attack')"); // it is a risky method, which can bring XSS (script injection) attacks to our web App
       }
 
     </script>
