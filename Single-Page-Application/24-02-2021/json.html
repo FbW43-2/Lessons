@@ -1,0 +1,80 @@
+<html>
+<!--  Json in JavaScript -->
+
+<!-- How to convert an JSON object to String-->
+
+
+<body>
+
+    <input type="text" id="email" placeholder="user email">
+    <input type="password" id="password" placeholder="user password">
+
+    <button onclick="Login()">Login</button>
+    <button onclick="TestJson()">Json Test</button>
+    <h2>JSON Conversion</h2>
+    <p id="show"></p>
+    <button onclick="JSONConvert()">Json Convert</button>
+
+
+    <h2>JSON Parsing</h2>
+    <button onclick="ReadingJSON()">JSON String to JavaScript Object</button>
+
+
+</body>
+
+<script>
+
+
+function TestJson(){
+    // bank account information  name, job, amount
+    let JsonObject={name: "Mo",job:"Teacher",amount:10000000000}; // a simple json object in JavaScript
+
+    alert(` Our client name is ${JsonObject.name} and his is a ${JsonObject.job}`);
+
+}
+
+
+function JSONConvert(){
+    // bank account information  name, job, amount
+    let JsonObject={name: "Mo",job:"Teacher",amount:10000000000}; // a simple json object in JavaScript
+  
+
+    let strObj= JSON.stringify(JsonObject); // when you want to export your JavaScript object to JSON (for other programs) you need to use Stringify()
+
+    document.getElementById("show").innerHTML=strObj;
+    console.log(JsonObject);
+
+}
+
+
+
+function ReadingJSON(){
+   
+    let StrVar='{"name":"Mo","job":"Teacher","amount":10000000000}'; // JSON string 
+    
+    let JsonObj= JSON.parse(StrVar); //JavaScript (JSON) Object
+    alert(` Our client name is ${JsonObj.name} and his is a ${JsonObj.job}`); // javaScript, JSON object
+
+}
+
+
+
+function Login(){
+
+    
+    let Users={name: "Mo",job:"Teacher",amount:10000000000,email:"admin@dci.org",password:123456}; // a simple json object in JavaScript , it is common in designing REST-APIs, express application in node.js
+
+    let useremail=document.getElementById("email").value;
+    let userpass=document.getElementById("password").value;
+
+    if(useremail==Users.email && userpass==Users.password){ // json 
+        alert("Welcome");
+    }else{
+       alert("wrong!");
+    }
+
+
+}
+
+</script>
+</html>
