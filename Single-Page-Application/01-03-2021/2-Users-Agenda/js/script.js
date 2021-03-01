@@ -25,3 +25,5 @@ fetch('https://jsonplaceholder.typicode.com/users').then(response => {
         })
     }
 })
+
+// create showAgenda function here
