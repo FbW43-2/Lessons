@@ -18,7 +18,7 @@ fetch('https://jsonplaceholder.typicode.com/users').then(response => {
                 <td>${element.phone}</td>
                 <td>${element.website}</td>
                 <td>${element.company.name}</td>
-                <td><button class="btn btn-success">Agenda</td>
+                <td><button onclick="showAgenda(${element.id})" class="btn btn-success">Agenda</td>
               </tr>`;
               tableBody.innerHTML += htmlRow;
             });
