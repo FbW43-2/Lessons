@@ -24,7 +24,7 @@ searchBtn.addEventListener('click', () => {
         //console.log(response);
         if(response.status === 200) {
             response.json().then(results => {
-                console.log(results);
+                console.log(results.results[0].hits);
             })
         }
     })
