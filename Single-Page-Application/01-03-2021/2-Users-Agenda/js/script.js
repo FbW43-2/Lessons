@@ -27,3 +27,16 @@ fetch('https://jsonplaceholder.typicode.com/users').then(response => {
 })
 
 // create showAgenda function here
+
+function showAgenda(userId){
+    const url = `https://jsonplaceholder.typicode.com/users/${userId}/todos`;
+    // console.log(url);
+    fetch(url).then(response => {
+        if(response.status === 200){
+            response.json().then(data => {
+                console.log(data);
+            })
+        }
+    })
+    
+}
