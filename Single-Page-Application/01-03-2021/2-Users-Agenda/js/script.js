@@ -4,6 +4,7 @@
 
 const tableBody = document.getElementById('tableBody');
 
+
 fetch('https://jsonplaceholder.typicode.com/users').then(response => {
     if(response.status === 200) {
         response.json().then(data => {
@@ -27,7 +28,7 @@ fetch('https://jsonplaceholder.typicode.com/users').then(response => {
 })
 
 // create showAgenda function here
-
+const todoTableBody = document.getElementById('todoTableBody');
 function showAgenda(userId){
     const url = `https://jsonplaceholder.typicode.com/users/${userId}/todos`;
     // console.log(url);
@@ -35,8 +36,19 @@ function showAgenda(userId){
         if(response.status === 200){
             response.json().then(data => {
                 console.log(data);
+                todoTableBody.innerHTML = "";
+
+                data.forEach(element => {
+                    const todoHTML = `<tr>
+                    <td>${element.title}</td>
+                    <td>${element.completed ? "Done" : "Not yet"}</td>
+                  </tr>`;
+                  todoTableBody.innerHTML += todoHTML;
+                });
+
+
             })
         }
     })
-    
+
 }
