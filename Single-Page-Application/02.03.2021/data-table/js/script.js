@@ -23,8 +23,8 @@ fetch('https://jsonplaceholder.typicode.com/users').then(response => {
                     element.company.name
                 ])
             }
-            var myTable = document.getElementById('basic');
-            var dataTable = new DataTable(myTable, {data});
+            const myTable = document.getElementById('basic');
+            const dataTable = new DataTable(myTable, {data});
         })
     }
 })
