@@ -5,6 +5,10 @@ class Person {
         this.age = age;
         this.married = married;
     }
+    fullName = () => {
+        return this.firstName + " " + this.lastName;
+    }
+
 }
 
 
