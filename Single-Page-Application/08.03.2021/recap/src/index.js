@@ -8,7 +8,7 @@ import './css/Main.css';
 class App extends React.Component {
     render() {
 
-        let x = 5;
+        let x = 5; 
         // jsx
         return (
             <div>
