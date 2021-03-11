@@ -17,6 +17,15 @@ class App extends React.Component {
         todoStorage: []
     }
 
+    // method to delete element from the todoStroage
+    deleteToDo = (index) => {
+        // solution with splice 
+        const tempArr = this.state.todoStorage;
+        tempArr.splice(index, 1);
+        // save the array on the state one more time
+        this.setState({todoStorage: tempArr});
+    }
+
     mainAddTodo = (todo) =>{
         //console.log(todo);
         // add the new todo to the storage inside the state of the APP
@@ -31,7 +40,7 @@ class App extends React.Component {
             <>
                 <h1>ToDo List</h1>
                 <AddToDo addtodo={this.mainAddTodo} />
-                <ShowToDos todos={this.state.todoStorage}/>
+                <ShowToDos deleteItem={this.deleteToDo} todos={this.state.todoStorage}/>
             </>
         );
     }

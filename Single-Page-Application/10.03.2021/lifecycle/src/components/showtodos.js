@@ -4,7 +4,9 @@ import React from 'react';
 class ShowToDos extends React.Component {
 
     doneBtnClick = (index) => {
-        console.log(index);
+        //console.log(index);
+        this.props.deleteItem(index);
+        
     }
     
     render() {
