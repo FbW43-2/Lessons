@@ -21,6 +21,12 @@ class App extends React.Component {
     // it will be called ONCE after render
     componentDidMount() {
         console.log('this is componentDidMount')
+        getToDos().then(data => {
+            
+            const titles = data.map(element => element.title);
+            console.log(titles);
+            this.setState({todoStorage: titles})
+        })
     }
 
     // it is going to be called after render on each update for the component
@@ -64,6 +70,9 @@ class App extends React.Component {
     }
     render() {
         console.log('this is render');
+
+        
+
         //console.log(this.state.todoStorage);
         return (
             <>
