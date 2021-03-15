@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     savePhotos = (results) => {
-        this.setState({ photos: results })
+        this.setState({ photos: results, choosenImageIndex: null })
     }
 
     preivewImage = (idx) =>{
@@ -21,11 +21,17 @@ class App extends React.Component {
     }
 
     render() {
+        console.log(this.state);
         return (
             <>
                 <SearchBar save={this.savePhotos} />
+                
+                {this.state.photos.length && this.state.choosenImageIndex !== null ? 
+                <Preview photoUrl={this.state.photos[this.state.choosenImageIndex].largeImageURL}/> 
+                : null  }
+
                 <Gallery preview={this.preivewImage} photos={this.state.photos} />
-                <Preview />
+                
             </>
         )
     }
