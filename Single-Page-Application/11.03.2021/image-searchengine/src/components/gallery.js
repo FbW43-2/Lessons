@@ -5,6 +5,7 @@ class Gallery extends React.Component {
 
     previewBtnClick = (index) => {
         console.log(index);
+        this.props.preview(index);
     }
     render() {
         return (
@@ -17,7 +18,7 @@ class Gallery extends React.Component {
                             <div className="card-body">
                                 <h5 className="card-title">{element.user}</h5>
                                 <p className="card-text" style={{minHeight:'70px'}}>{element.tags}</p>
-                                
+
                                 <button 
                                 onClick={() =>{this.previewBtnClick(idx)}}  
                                 className="btn btn-primary" 
