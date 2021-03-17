@@ -1,0 +1,55 @@
+.nav{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    width: 370px;
+    margin: auto;
+}
+
+.nav>li{
+    display: inline-block;
+    margin-right: 20px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 5px 0 5px 0;
+    width: 100px;
+    text-align: center;
+    transition: all 1s;
+}
+.nav>li:hover{
+    transform: scale(1.5);
+    background-color: gray;
+}
+.nav>li>a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px 0 5px 0;
+}
+
+.nav>li>ul>li>a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.nav>li>ul>li{
+    margin-bottom: 5px;
+}
+.sub:hover > ul {
+    display: block;
+}
+
+.sub > ul > li:hover {
+    background-color: gray;
+}

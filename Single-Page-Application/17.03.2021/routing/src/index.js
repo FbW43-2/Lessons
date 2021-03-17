@@ -13,14 +13,14 @@ const App = () => {
         <Router>
             
             <div>introduction to react router dom</div>
-            <ul>
+            <ul className="nav">
                 <li>
                     <Link to="/">Home</Link>
                 </li>
                 <li>
                     <Link to="/about">about</Link>
                 </li>
-                <li>
+                <li className="sub">
                     <Link to="/services">services</Link>
                     <ul>
                         <li>
