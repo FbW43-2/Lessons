@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Home from './components/home';
 import About from './components/about';
 import Services from './components/services';
+import './style.css';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -21,6 +22,17 @@ const App = () => {
                 </li>
                 <li>
                     <Link to="/services">services</Link>
+                    <ul>
+                        <li>
+                            <Link to="/services/service1">service1</Link>
+                        </li>
+                        <li>
+                            <Link to="/services/service2">service2</Link>
+                        </li>
+                        <li>
+                            <Link to="/services/service3">service3</Link>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 

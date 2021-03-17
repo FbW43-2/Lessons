@@ -15,9 +15,13 @@ const Services = () => {
                 <Route exact path={path}>
                     <div>
                         this is services page
+                        <Link to={`${path}/service1`} > Service1  </Link>
+                        <Link to={`${path}/service2`} > Service2  </Link>
+                        <Link to={`${path}/service3`} > Service3  </Link>
+                        
                     </div>
                 </Route>
-                <Route path={path + '/service1'} > <Service1/> </Route>
+                <Route path={`${path}/service1`} > <Service1/> </Route>
                 <Route path={path + '/service2'} > <Service2/> </Route>
                 <Route path={path + '/service3'} > <Service3/> </Route>
             </Switch>
