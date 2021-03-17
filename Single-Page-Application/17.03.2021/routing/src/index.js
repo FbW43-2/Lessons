@@ -30,11 +30,11 @@ const App = () => {
                 <Route path="/services"><Services /></Route>
                 
             </Switch>
-            
+            {/* footer */}
 
         </Router>
 
-        // footer
+        
 
     )
 }
