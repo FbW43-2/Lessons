@@ -8,7 +8,7 @@ const Slider = () => {
                 <div className="row">
                     <div className="col-sm-12">
                         <Carousel>
-                            <CarouselItem className="item">
+                            <CarouselItem className="item " interval={3000}  >
                                 <div className="col-sm-6">
                                     <h1><span>E</span>-SHOPPER</h1>
                                     <h2>Free E-Commerce Template</h2>
@@ -21,7 +21,7 @@ const Slider = () => {
                                 </div>
                             </CarouselItem>
 
-                            <CarouselItem className="item">
+                            <CarouselItem className="item" interval={3000} fade>
                                 <div className="col-sm-6">
                                     <h1><span>E</span>-SHOPPER</h1>
                                     <h2>100% Responsive Design</h2>
@@ -34,7 +34,7 @@ const Slider = () => {
                                 </div>
                             </CarouselItem>
 
-                            <CarouselItem className="item">
+                            <CarouselItem className="item" interval={3000} fade>
                             <div className="col-sm-6">
 									<h1><span>E</span>-SHOPPER</h1>
 									<h2>Free Ecommerce Template</h2>

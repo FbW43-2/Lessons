@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PageHeader from './components/pageHeader';
-import Slider from './components/slider';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './pages/home';
 
 const App = () => {
     return (
-        <>
+        <Router>
             <PageHeader />
-            <Slider />
-        </>
+
+
+
+            <Switch>
+                <Route exact path="/"><Home /></Route>
+            </Switch>
+
+        </ Router >
     );
 };
 
