@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom';
 const ProductDetails = (props) => {
     const {id} = useParams();
     console.log(id);
+    const foundProduct = props.products.find(element => element.id == id)
     return (
         <section>
 		<div className="container">
@@ -147,7 +148,7 @@ const ProductDetails = (props) => {
 						
 					</div>
 				</div>
-				
+				{foundProduct?
 				<div className="col-sm-9 padding-right">
 					<div className="product-details">
 						<div className="col-sm-5">
@@ -490,7 +491,8 @@ const ProductDetails = (props) => {
 					</div>
 					
 				</div>
-			</div>
+			    : null}
+            </div>
 		</div>
 	</section>
     );
