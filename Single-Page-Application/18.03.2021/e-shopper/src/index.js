@@ -6,6 +6,11 @@ import Home from './pages/home';
 
 const App = () => {
 
+    // if we want to fetch the data
+
+    //React.useEffect(() => {
+        // here we can fetch the data
+    //}, [])
     const products = [
         {
             id: 123451,
