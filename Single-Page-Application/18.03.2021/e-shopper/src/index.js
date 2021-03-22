@@ -58,7 +58,7 @@ const App = () => {
 
             <Switch>
                 <Route exact path="/"><Home products={products} /></Route>
-                <Route path="/productdetails/:id"><ProductDetails /></Route>
+                <Route path="/productdetails/:id"><ProductDetails products={products} /></Route>
             </Switch>
 
         </ Router >
