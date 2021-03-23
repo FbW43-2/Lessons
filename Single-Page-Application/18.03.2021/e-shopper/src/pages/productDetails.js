@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 
 const ProductDetails = (props) => {
 
@@ -10,9 +10,15 @@ const ProductDetails = (props) => {
 		//console.log(document.body.clientHeight);
 	  }, [])
 
+	  // useHistory is a hook to let us navigate to any rout or link dynamicly 
+	const history = useHistory();
+
     const {id} = useParams();
     console.log(id);
     const foundProduct = props.products.find(element => element.id == id)
+	if(!foundProduct){
+		history.push('/404')
+	}
     return (
         <section>
 		<div className="container">
