@@ -2,6 +2,14 @@ import React from 'react';
 import {useParams} from 'react-router-dom';
 
 const ProductDetails = (props) => {
+
+
+	// scroll to the top after showing the 
+	React.useEffect(() => {
+		window.scrollTo(0, 0)
+		//console.log(document.body.clientHeight);
+	  }, [])
+
     const {id} = useParams();
     console.log(id);
     const foundProduct = props.products.find(element => element.id == id)
@@ -153,7 +161,7 @@ const ProductDetails = (props) => {
 					<div className="product-details">
 						<div className="col-sm-5">
 							<div className="view-product">
-								<img src="/images/product-details/1.jpg" alt="" />
+								<img src={foundProduct.imgUrl} alt="" />
 								<h3>ZOOM</h3>
 							</div>
 							<div id="similar-product" className="carousel slide" data-ride="carousel">
@@ -189,11 +197,11 @@ const ProductDetails = (props) => {
 						<div className="col-sm-7">
 							<div className="product-information">
 								<img src="images/product-details/new.jpg" className="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
+								<h2>{foundProduct.title}</h2>
+								<p>Web ID: {foundProduct.id}</p>
 								<img src="images/product-details/rating.png" alt="" />
 								<span>
-									<span>US $59</span>
+									<span>US ${foundProduct.price}</span>
 									<label>Quantity:</label>
 									<input type="text"  />
 									<button type="button" className="btn btn-fefault cart">
