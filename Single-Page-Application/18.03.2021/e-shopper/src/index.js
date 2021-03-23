@@ -4,6 +4,7 @@ import PageHeader from './components/pageHeader';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/home';
 import ProductDetails from './pages/productDetails';
+import ContactUs from './pages/contactus';
 
 const App = () => {
 
@@ -59,6 +60,8 @@ const App = () => {
             <Switch>
                 <Route exact path="/"><Home products={products} /></Route>
                 <Route path="/productdetails/:id"><ProductDetails products={products} /></Route>
+                {/* <Route path="/contactus"><ContactUs/></Route> */}
+                <Route path="/contactus" component={ContactUs} />
             </Switch>
 
         </ Router >
