@@ -11,7 +11,8 @@ const App = () => {
             <Link to="/users">Users</Link>
 
             <Switch>
-                <Route path="/users" ><Users /></Route>
+                <Route  path="/users" ><Users /></Route>
+                <Route path="/users/:id"></Route>
             </Switch>
         </Router>
        
