@@ -21,13 +21,11 @@ const UserDetails = (props) => {
             <ul>
                 <li><Link to={`${url}/posts`}>posts</Link></li>
                 <li><Link to={`${url}/todos`}>todos</Link></li>
-                <li><Link to={`${url}/photos`}>Photos</Link></li>
                 <li><Link to={`${url}/albums`}>Albums</Link></li>
             </ul>
             <Switch>
                 <Route path={`${path}/posts`}> <Posts />  </Route>
                 <Route path={`${path}/todos`}> <ToDos />  </Route>
-                <Route path={`${path}/photos`}> <h1>here we need to render photos</h1>  </Route>
                 <Route path={`${path}/albums`}> <h1>here we need to render Albums</h1>  </Route>
             </Switch>
             </div>
