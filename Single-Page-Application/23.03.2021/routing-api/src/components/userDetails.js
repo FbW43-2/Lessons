@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
 import Posts from './posts';
+import ToDos from './todos';
 
 const UserDetails = (props) => {
     const {id} = useParams();
@@ -25,7 +26,7 @@ const UserDetails = (props) => {
             </ul>
             <Switch>
                 <Route path={`${path}/posts`}> <Posts />  </Route>
-                <Route path={`${path}/todos`}> <h1>here we need to render todos</h1>  </Route>
+                <Route path={`${path}/todos`}> <ToDos />  </Route>
                 <Route path={`${path}/photos`}> <h1>here we need to render photos</h1>  </Route>
                 <Route path={`${path}/albums`}> <h1>here we need to render Albums</h1>  </Route>
             </Switch>
