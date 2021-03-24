@@ -14,11 +14,19 @@ const ToDos = () => {
 
     return (
         <ul>
-            {state.todos.map(todo =>
-            <li>
+            
+            {state.todos.filter(todo => todo.completed).map(todo =>
+            <li key={todo.id}>
                 <p>{todo.title} <strong>{todo.completed ? 'Done' : 'not yet' }</strong></p>
             </li>
             )}
+
+            {state.todos.filter(todo => !todo.completed).map(todo =>
+            <li key={todo.id}>
+                <p>{todo.title} <strong>{todo.completed ? 'Done' : 'not yet' }</strong></p>
+            </li>
+            )}
+
         </ul>
     );
 };
