@@ -51,3 +51,21 @@ export const getToDos = (id) => {
         })
     })
 }
+
+export const getComments = (postId) => {
+    return new Promise((resolve, reject) => {
+        fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`).then(response => {
+            if (response.status === 200) {
+                response.json().then(data => {
+                    resolve(data);
+                }).catch(error => {
+                    reject(error);
+                })
+            } else {
+                reject(response.status);
+            }
+        }).catch(error => {
+            reject(error);
+        })
+    })
+}
