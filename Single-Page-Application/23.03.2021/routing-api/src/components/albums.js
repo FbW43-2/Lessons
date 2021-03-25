@@ -11,31 +11,42 @@ const Albums = () => {
     }, []);
 
     const getAlbumPhotos = (albumId) => {
+        const foundAlbum = state.albums.find(album => album.id === albumId)
+        if(!foundAlbum.show){
         getPhotos(albumId).then(data => {
             const newAlbums = state.albums.map(album => {
                 if (album.id === albumId) {
-                    album.photos = data
+                    album.photos = data;
+                    album.show = true;
                 }
                 return album;
             });
             setState({ albums: newAlbums })
-
         })
+    } else {
+        const newAlbums = state.albums.map(album => {
+            if(album.id === albumId) {
+                foundAlbum.show = false;
+            }
+            return album;
+        })
+        setState({albums: newAlbums})
+    }
     }
 
     const albumsElement = state.albums.map(album => {
         let photosElement = null;
-        if (album.photos) {
+        if (album.photos && album.show) {
             photosElement =
                 <div className="row">
                     {album.photos.map(photo =>
                         <div key={photo.id} className="col-md-3">
-                            <div class="card" >
-                                <img class="card-img-top"  src={photo.thumbnailUrl} alt={photo.title} />
-                                <div class="card-body">
-                                    <h5 class="card-title">{photo.title}</h5>
-                                    <p class="card-text">{photo.title}</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div className="card" >
+                                <img className="card-img-top"  src={photo.thumbnailUrl} alt={photo.title} />
+                                <div className="card-body">
+                                    <h5 className="card-title">{photo.title}</h5>
+                                    <p className="card-text">{photo.title}</p>
+                                    <a href="#" className="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
                         </div>
