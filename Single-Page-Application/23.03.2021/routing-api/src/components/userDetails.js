@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
+import Albums from './albums';
 import Posts from './posts';
 import ToDos from './todos';
 
@@ -26,7 +27,7 @@ const UserDetails = (props) => {
             <Switch>
                 <Route path={`${path}/posts`}> <Posts />  </Route>
                 <Route path={`${path}/todos`}> <ToDos />  </Route>
-                <Route path={`${path}/albums`}> <h1>here we need to render Albums</h1>  </Route>
+                <Route path={`${path}/albums`}> <Albums />  </Route>
             </Switch>
             </div>
 
