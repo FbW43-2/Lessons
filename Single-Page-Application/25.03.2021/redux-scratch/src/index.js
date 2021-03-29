@@ -7,6 +7,7 @@ import reducers from './reducers';
 
 import AddToDo from './components/addtodo';
 import ShowToDos from './components/showtodos';
+import InProgress from './components/inprogress';
 
 const App = () => {
     // const [state, setState] = useState({todosList: []})
@@ -22,6 +23,7 @@ const App = () => {
 
             <AddToDo />
             <ShowToDos />
+            <InProgress />
         </div>
     );
 };

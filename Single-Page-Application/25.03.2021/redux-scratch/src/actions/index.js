@@ -11,3 +11,10 @@ export const deleteTodo = (idx) => {
         payload: idx
     }
 }
+
+export const addInProgress = (todo) => {
+    return {
+        type: 'ADD_INPROGRESS',
+        payload: todo
+    }
+}

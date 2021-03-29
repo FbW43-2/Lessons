@@ -13,13 +13,25 @@ const todosReducer = (todos = todosList, action) => {
     }
     if (action.type === 'DELETE_TODO') {
         todosList.splice(action.payload, 1);
-        return [...todosList]
+        return [...todosList];
     }
 
     return todos;
-
 }
 
+const inprogressList = [];
+
+const inprogressReducer = (inprogress = inprogressList, action) => {
+
+    if (action.type === 'ADD_INPROGRESS') {
+        inprogressList.push(action.payload);
+        return [...inprogressList];
+    }
+    return inprogress;
+}
+
+
 export default combineReducers({
-    todos: todosReducer
+    todos: todosReducer,
+    inprogressList: inprogressReducer
 })
