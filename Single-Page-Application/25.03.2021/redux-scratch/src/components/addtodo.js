@@ -1,4 +1,7 @@
 import React, { useRef } from 'react';
+import {connect} from 'react-redux';
+
+import {addTodo} from '../actions'
 
 const AddToDo = (props) => {
 
@@ -15,4 +18,4 @@ const AddToDo = (props) => {
     );
 };
 
-export default AddToDo;
+export default connect(null, {save: addTodo})(AddToDo);

@@ -11,6 +11,10 @@ const todosReducer = (todos = todosList, action) => {
         todosList.push(action.payload);
         return [...todosList]
     }
+    if (action.type === 'DELETE_TODO') {
+        todosList.splice(action.payload, 1);
+        return [...todosList]
+    }
 
     return todos;
 
