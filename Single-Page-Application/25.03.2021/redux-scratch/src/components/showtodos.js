@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 const ShowToDos = (props) => {
     return (
@@ -14,4 +15,10 @@ const ShowToDos = (props) => {
     );
 };
 
-export default ShowToDos;
+const mapStateToProps = (state) => {
+    return ({
+        todolist: state.todos
+    })
+}
+
+export default connect(mapStateToProps)(ShowToDos) ;

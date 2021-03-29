@@ -1,7 +1,10 @@
 import {combineReducers} from 'redux';
 
 
-const todosList = [];
+const todosList = [
+    'this is thing that I should do',
+    'this is another thing that I should do'
+];
 
 const todosReducer = (todos = todosList, action) => {
     if (action.type === 'ADD_TODO') {
@@ -9,7 +12,7 @@ const todosReducer = (todos = todosList, action) => {
         return [...todosList]
     }
 
-    return todosList;
+    return todos;
 
 }
 
