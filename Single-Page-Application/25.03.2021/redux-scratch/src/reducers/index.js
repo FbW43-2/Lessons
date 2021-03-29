@@ -16,6 +16,11 @@ const todosReducer = (todos = todosList, action) => {
         return [...todosList];
     }
 
+    if (action.type === 'ADD_INPROGRESS') {
+        todosList.splice(action.payload.idx, 1);
+        return [...todosList];
+    }
+
     return todos;
 }
 
@@ -24,7 +29,7 @@ const inprogressList = [];
 const inprogressReducer = (inprogress = inprogressList, action) => {
 
     if (action.type === 'ADD_INPROGRESS') {
-        inprogressList.push(action.payload);
+        inprogressList.push(action.payload.todo);
         return [...inprogressList];
     }
     return inprogress;

@@ -7,8 +7,9 @@ const ShowToDos = (props) => {
         props.delete(index)
     }
 
-    const addInProgressBtnClick = (todo) => {
-        props.addInProgress(todo);
+    const addInProgressBtnClick = (todo, idx) => {
+        props.addInProgress(todo, idx);
+        //props.delete(idx)
     }
     return (
         <div>
@@ -18,7 +19,7 @@ const ShowToDos = (props) => {
                     <li key={idx}>
                         {todo}
                         <button onClick={() => {deleteBtnClick(idx)}}>delete</button>
-                        <button onClick={() => {addInProgressBtnClick(todo)}}>in progress</button>
+                        <button onClick={() => {addInProgressBtnClick(todo, idx)}}>in progress</button>
                     </li>
                 )}
             </ul>
