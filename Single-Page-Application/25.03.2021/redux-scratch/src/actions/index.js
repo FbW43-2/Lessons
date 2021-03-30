@@ -32,3 +32,10 @@ export const deleteInProgress = (idx) => {
         payload: idx
     }
 }
+
+export const deleteDone = (idx) => {
+    return {
+        type: 'DELETE_DONE',
+        payload: idx
+    }
+}

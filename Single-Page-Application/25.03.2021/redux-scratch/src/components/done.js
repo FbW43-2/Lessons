@@ -1,7 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import { deleteDone } from '../actions'
 
 const Done = (props) => {
+
+    const deleteBtnClick = (idx) => {
+        props.deleteDone(idx);
+    }
+
     return (
         
         <div>
@@ -10,6 +16,7 @@ const Done = (props) => {
                 {props.donelist.map((elm, idx) => 
                     <li key={idx}>
                         {elm}
+                        <button onClick={() => {deleteBtnClick(idx)}}>delete</button>
                     </li>
                 )}
             </ul>
@@ -23,4 +30,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Done);
+export default connect(mapStateToProps, {deleteDone})(Done);

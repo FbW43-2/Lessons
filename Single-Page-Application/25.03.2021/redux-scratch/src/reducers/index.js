@@ -52,6 +52,11 @@ const doneReducer = (done = donelist, action) => {
         return [...donelist]
     }
 
+    if (action.type === 'DELETE_DONE') {
+        donelist.splice(action.payload, 1);
+        return [...donelist]
+    }
+
     return done;
 }
 
