@@ -25,3 +25,10 @@ export const addDone = (inprogress, idx) => {
         payload: {inprogress, idx}
     }
 }
+
+export const deleteInProgress = (idx) => {
+    return {
+        type: 'DELETE_INPROGRESS',
+        payload: idx
+    }
+}

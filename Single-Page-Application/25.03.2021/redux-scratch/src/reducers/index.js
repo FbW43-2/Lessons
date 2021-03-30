@@ -36,6 +36,11 @@ const inprogressReducer = (inprogress = inprogressList, action) => {
         inprogressList.splice(action.payload.idx, 1);
         return [...inprogressList]
     }
+    if (action.type === 'DELETE_INPROGRESS') {
+        inprogressList.splice(action.payload, 1);
+        return [...inprogressList]
+    }
+
     return inprogress;
 }
 
