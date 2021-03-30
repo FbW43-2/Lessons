@@ -46,3 +46,10 @@ export const backProgressTodos = (idx, elm) => {
         payload: {idx, elm}
     }
 }
+
+export const backDoneProgress = (idx, elm) => {
+    return {
+        type: 'BACK_DONE_PROGRESS',
+        payload: {idx, elm}
+    }
+}

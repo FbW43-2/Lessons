@@ -48,6 +48,10 @@ const inprogressReducer = (inprogress = inprogressList, action) => {
         inprogressList.splice(action.payload.idx, 1);
         return [...inprogressList];
     }
+    if (action.type === 'BACK_DONE_PROGRESS') {
+        inprogressList.push(action.payload.elm);
+        return [...inprogressList]
+    }
 
     return inprogress;
 }
@@ -62,6 +66,11 @@ const doneReducer = (done = donelist, action) => {
 
     if (action.type === 'DELETE_DONE') {
         donelist.splice(action.payload, 1);
+        return [...donelist]
+    }
+
+    if (action.type === 'BACK_DONE_PROGRESS') {
+        donelist.splice(action.payload.idx, 1);
         return [...donelist]
     }
 
