@@ -39,3 +39,10 @@ export const deleteDone = (idx) => {
         payload: idx
     }
 }
+
+export const backProgressTodos = (idx, elm) => {
+    return {
+        type: 'BACK_PROGRESS_TODOS',
+        payload: {idx, elm}
+    }
+}

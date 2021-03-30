@@ -21,6 +21,10 @@ const todosReducer = (todos = todosList, action) => {
         return [...todosList];
     }
 
+    if (action.type === 'BACK_PROGRESS_TODOS') {
+        todosList.push(action.payload.elm)
+        return [...todosList]
+    }
     return todos;
 }
 
@@ -39,6 +43,10 @@ const inprogressReducer = (inprogress = inprogressList, action) => {
     if (action.type === 'DELETE_INPROGRESS') {
         inprogressList.splice(action.payload, 1);
         return [...inprogressList]
+    }
+    if (action.type === 'BACK_PROGRESS_TODOS'){
+        inprogressList.splice(action.payload.idx, 1);
+        return [...inprogressList];
     }
 
     return inprogress;
