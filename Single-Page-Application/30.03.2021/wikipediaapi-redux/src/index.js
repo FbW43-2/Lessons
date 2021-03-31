@@ -2,17 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import reducers from './reducers'
+import reducers from './reducers';
+import SearchBar from './components/searchbar';
 
 const App = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+           <SearchBar />
+        </>
     );
 };
-
 
 ReactDOM.render(
 <Provider store={createStore(reducers)}>
