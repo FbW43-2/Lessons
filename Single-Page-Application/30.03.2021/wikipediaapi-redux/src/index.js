@@ -7,11 +7,13 @@ import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 import SearchBar from './components/searchbar';
+import Content from './components/content';
 
 const App = () => {
     return (
         <>
            <SearchBar />
+           <Content />
         </>
     );
 };

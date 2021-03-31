@@ -26,3 +26,11 @@ export const insertAction = (text) => {
     // })
     
 }
+
+
+export const selectIdxAction = (idx) => {
+    return {
+        type: 'SELECT_INDEX',
+        payload: idx
+    }
+}

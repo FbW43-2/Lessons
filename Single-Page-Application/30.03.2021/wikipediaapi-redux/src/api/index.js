@@ -6,7 +6,12 @@ export const getResult = (searchWord) => {
         .then(response =>{
             if (response.status === 200) {
                 response.json().then(data => {
-                    resolve(data)
+
+                    //setTimeout(() => {
+                        resolve(data)
+                    //}, 10000);
+
+                    
                 }).catch(error => {
                     reject(error)
                 })
