@@ -1,12 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {selectIdxAction} from '../actions'
 
 const SideBar = (props) => {
 
 
     const titleClick = (e, idx) => {
         e.preventDefault();
-
+        props.select(idx);
 
     }
     //console.log(props.data);
@@ -45,4 +46,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(SideBar);
+export default connect(mapStateToProps, {select: selectIdxAction})(SideBar);

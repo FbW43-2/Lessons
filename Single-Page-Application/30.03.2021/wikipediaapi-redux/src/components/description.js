@@ -1,11 +1,23 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
-const Description = () => {
-    return (
-        <>
-            
-        </>
-    );
+const Description = (props) => {
+    if (props.result.staus === 'SUCCESS'){
+        return (
+            <p>
+                {props.result.data[props.result.selectedIdx].snnippet}
+            </p>
+        );
+    } else {
+        return null
+    }
+    
 };
 
-export default Description;
+const mapStateToProps = (state) => {
+    return {
+        result: state.results
+    }
+}
+
+export default connect(mapStateToProps)(Description);
