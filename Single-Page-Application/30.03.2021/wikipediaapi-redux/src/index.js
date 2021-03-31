@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 import SearchBar from './components/searchbar';
@@ -16,7 +17,7 @@ const App = () => {
 };
 
 ReactDOM.render(
-<Provider store={createStore(reducers)}>
+<Provider store={createStore(reducers, applyMiddleware(thunk))}>
     <App />
 </Provider>
 , document.getElementById('root'));
