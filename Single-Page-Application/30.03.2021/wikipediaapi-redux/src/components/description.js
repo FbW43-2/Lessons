@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 const Description = (props) => {
     if (props.result.status === 'SUCCESS' && props.result.selectedIdx !== -1){
         return (
-            <p>
-                {props.result.data[props.result.selectedIdx].snippet}
+            <p dangerouslySetInnerHTML={{__html: props.result.data[props.result.selectedIdx].snippet}}>
+                
             </p>
         );
     } else {
