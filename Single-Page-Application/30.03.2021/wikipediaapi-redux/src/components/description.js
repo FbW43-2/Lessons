@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux'
 
 const Description = (props) => {
-    if (props.result.staus === 'SUCCESS'){
+    if (props.result.status === 'SUCCESS' && props.result.selectedIdx !== -1){
         return (
             <p>
-                {props.result.data[props.result.selectedIdx].snnippet}
+                {props.result.data[props.result.selectedIdx].snippet}
             </p>
         );
     } else {
