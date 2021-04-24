@@ -1,0 +1,50 @@
+[
+    {
+        "author": "Chars Conner",
+        "title": "History of America",
+        "price": 19,
+        "german": "Die Geschichte von Amerika",
+        "inStock": 5
+    },
+    {
+        "author": "Ben Conner",
+        "title": "The First World War",
+        "price": 12
+    },
+    {
+        "author": "Anonymous",
+        "title": "All about Tea",
+        "price": 12,
+        "german": "Alles was man über Tee wissen muss"
+    },
+    {
+        "author": "Regina Conner",
+        "title": "Redux explained",
+        "price": 12,
+        "inStock": 0
+    },
+    {
+        "author": "Diana Conner",
+        "title": "How to get rich fast",
+        "price": 12
+    },
+    {
+        "author": "Lisa Conner",
+        "title": "5 diats that work",
+        "price": 12
+    },
+    {
+        "author": "Frank Conner",
+        "title": "Alps",
+        "price": 12,
+        "german": "Die Überquerung der Alpen",
+        "inStock": 10
+    },
+    {
+        "author": "Peter Conner",
+        "title": "Yoga for men",
+        "price": 12,
+        "german": "Männer können auch Yoga",
+        "inStock": ">99"
+    }
+]

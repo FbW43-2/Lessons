@@ -1,0 +1,26 @@
+# connect to mongodb
+TODO
+
+# use the existing database mediaStore
+TODO
+
+# check your database to make sure, that you have a movie collection filled with movies
+
+# write a statement to delete movies, which
+1) are shorter than 30 minutes
+TODO
+
+# write a statement to delete movies, which
+1) are rated worse than 2 and
+2) are restricted to adults (+18)
+TODO
+
+# write a statement to delete movies, which
+1) dont't have a field "rating"
+TODO
+
+# write a statement to remove only one movie, which is longer than 120 minutes
+TODO
+
+# write a statement to remove all movies
+TODO

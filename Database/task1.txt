@@ -1,0 +1,25 @@
+# connect to mongodb
+TODO
+
+# use the existing database mediaStore
+TODO
+
+# create a new collection for your movies
+#TODO
+
+# insert the movie "Aladdin" with following fields:
+1) title: "Aladdin"
+2) year: 2019
+3) rating: 3.9
+4) length: 128
+TODO
+
+# insert many movies at one:
+Add as many movies to your collection as you want (at least 5)
+1) A movie should have a title f.e. "James Bond - Casino Royal"
+2) A moie should have a release year f.e. 2006
+3) some movies can have a rating f.e. 2.5 (best is 5)
+4) some movies can have length f.e 145 (minutes)
+TODO
+
+# check your database to make sure, that the collection is filled with the movies

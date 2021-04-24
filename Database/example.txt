@@ -1,0 +1,165 @@
+# connect to mongodb
+mongosh "mongodb+srv://soundtrackbox.2exrs.mongodb.net/myFirstDatabase" --username JanCzok
+
+# show a list of available databases
+show dbs
+-- The main purpose of this admin database is to store system collections and user authentication and authorization data.
+-- The purpose of the local database: https://docs.mongodb.com/manual/reference/local-database/
+-- The purpose of the replication database: https://docs.mongodb.com/manual/replication/
+
+# create a new database
+use mediaStore
+
+# add a first document to your new databases
+db.songs.insertOne({"composer":"Beethoven", "song": "Ode to Joy"})
+
+# check if you can see the database
+show dbs
+
+# crate a new collection:
+db.createCollection("books")
+
+# insert books to the new collection
+db.books.insertOne({"author": "John Smith", "title": "The art of music", "price": 12})
+db.books.insertOne({"author": "Bob Smith", "title": "programming for dummies", "price": 31})
+db.books.insertOne({"author": "Robert Smith", "title": "vegan cooking", "price": 19})
+db.books.insertOne({"author": "Angelina Smith", "title": "spanish part 1", "price": 7})
+db.books.insertOne({"author": "Angelina Smith", "title": "spanish part 2", "price": 5})
+db.books.insertOne({"author": "Angelina Smith", "title": "spanish part 8", "price": 9})
+
+----------------------------------------------------------------------------------------
+
+# find books by one field
+db.books.find()
+db.books.find({"author": "John Smith"})
+db.books.find( { price: { $gt: 10 }  } )
+
+#find books by many fields
+db.books.find(
+    {
+        "price": { $lt: 25},
+        "author": "Angelina Smith"
+    }
+)
+db.books.find(
+    {
+        "price": { $lt: 25},
+        "author": "Angelina Smith",
+        "title": { $exists: true}
+    }
+)
+
+# add many books at once
+db.books.insertMany( 
+ ... books.json
+);
+
+# find books with complex criteria
+db.books.find(
+    { 
+        "price": { $lt: 25}, 
+        "german": { $exists: true}, 
+        "inStock": { $exists: true } 
+    } 
+)
+
+# limits to keep in mind - if inStock is not a number, it will not appear in the results
+db.books.find(
+    {
+        "inStock": { $gt: 0}
+    }
+)
+
+----------------------------------------------------------------------------------------
+
+# The book "The First World War" is on discount and costs only 10$ now
+db.books.findOneAndUpdate(
+    {
+        "title": "The First World War"
+    },
+    {
+        $set:
+        {
+            "price": 10
+        }
+    }
+)
+
+
+# Angelina Smith is newly married. Her name changed to Brown
+db.books.updateMany(
+    {
+        "author": "Angelina Smith"
+    },
+    { 
+        $set: 
+        {
+            "author": "Angelina Brown"
+        }
+    }
+)
+
+
+# update many entries using the try-catch syntax - increases the inStock value by one
+try{
+db.books.updateMany(
+       { 
+        "price": { $lt: 25}, 
+        "german": { $exists: true}, 
+        "inStock": { $exists: true } 
+    },
+       { $inc : { "inStock" : 1 } }
+)} catch (e) {
+    print(e);
+}
+
+# update the book "The First World War" to have a new field e-book
+db.books.findOneAndUpdate(
+    {
+        "title": "The First World War"
+    },
+    {
+        $set:
+        {
+            "e-book": true
+        }
+    }
+)
+
+---------------------------------------------------------
+
+# remove books that dont't have an "inStock" or "german" field
+db.books.remove({
+    "$or": [
+        { "inStock": { "$exists": false } },
+        { "german": { "$exists": false } }
+    ]
+})
+
+# remove the book "Yoga for Men"
+db.books.remove( 
+     { 
+         "title": "Yoga for men"
+     } 
+);
+
+# remove one book written by Angelina Brown
+db.books.remove( 
+     { 
+         "author": "Angelina Brown"
+     },
+     {
+         justOne: true
+     }
+);
+
+
+# remove books which are not in stock
+db.books.remove( 
+    { 
+        "inStock": 0 
+    } 
+);
+
+# remove all entries
+db.books.remove( { } )
