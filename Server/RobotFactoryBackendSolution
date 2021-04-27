@@ -1,0 +1,109 @@
+const express = require('express')
+const app = express()
+const cors = require('cors');
+const port = 3001
+
+/** REQUEST PARSERS */
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// omit cors errors
+app.use(cors());
+
+let robotFactory = [];
+
+// write function, which adds a json object with the robot name and the default position/heaing to the robotFactory Array
+createRobot = (robotName) => {
+    robotFactory.push({
+        "name": robotName,
+        "id": robotFactory.length,
+        "posX": 0,
+        "posY": 0,
+        "heading": "NORTH"
+    })
+}
+
+// write a functions which finds a robot by id and changes his direction clockwise
+turnRight = (id) => {
+    switch(robotFactory[id].heading){
+        case "NORTH": robotFactory[id].heading="EAST"; break;
+        case "EAST": robotFactory[id].heading="SOUTH"; break;
+        case "SOUTH": robotFactory[id].heading="WEST"; break;
+        case "WEST": robotFactory[id].heading="NORTH"; break;
+        default: null;
+    }
+}
+
+// write a functions which finds a robot by id and changes his direction anti-clockwise
+turnLeft = (id) => {
+    switch(robotFactory[id].heading){
+        case "NORTH": robotFactory[id].heading="WEST"; break;
+        case "EAST": robotFactory[id].heading="NORTH"; break;
+        case "SOUTH": robotFactory[id].heading="EAST"; break;
+        case "WEST": robotFactory[id].heading="SOUTH"; break;
+        default: null;
+    }
+}
+
+// write a functions which finds a robot by id and changes his position one step forward
+moveForward = (id) => {
+    switch(robotFactory[id].heading){
+        case "NORTH": robotFactory[id].posY++; break;
+        case "EAST": robotFactory[id].posX++; break;
+        case "SOUTH": robotFactory[id].posY--; break;
+        case "WEST": robotFactory[id].posX--; break;
+        default:
+    }
+}
+
+// fill out the middleware function, which responds with the entire robotFactory array
+app.get('/robots', (req, res) => {
+    res.send(robotFactory);
+})
+
+// write a middleware, which creates a new robot using the function createRobot. Read the name from the request body
+app.put('/create', (req, res) => {
+    // read the name of the robot out of the request body
+    const robotName = req.body.name;
+    // create robot
+    createRobot(robotName);
+    // respond to the requestor
+    res.send('Success');
+});
+
+// write a middleware, which rotates one robot right using the function turnRight. Read the id from the request body
+app.post('/right', (req, res) => {
+    // read in the id from the request body
+    const id = req.body.id;
+    // calling the method turn right
+    turnRight(id);
+    // respond to the requestor
+    const robot = robotFactory.find(robot => robot.id === id);
+    res.send(robot);
+});
+
+// write a middleware, which rotates one robot left using the function turnLeft. Read the id from the request body
+app.post('/left', (req, res) => {
+    // read in the id from the request body
+    const id = req.body.id;
+    // calling the method for turning left
+    turnLeft(id);
+    // respond to the requestor
+    const robot = robotFactory.find(robot => robot.id === id);
+    res.send(robot);
+});
+
+// write a middleware, which moves the robot using the function moveRobot. Read the id from the request body
+app.post('/move', (req, res) => {
+    // read in the id from the request body
+    const id = req.body.id;
+    // make robot move
+    moveForward(id);
+    // respond to requestor
+    const robot = robotFactory.find(robot => robot.id === id);
+    res.send(robot);
+});
+
+app.listen(port, () => {
+    console.log(`Eddy is listening for commands at http://localhost:${port}`)
+});
