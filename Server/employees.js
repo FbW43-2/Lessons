@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = 3001;
+
+// omit cors errors
+app.use(cors());
 
 /**
  * REQUEST PARSER
@@ -30,7 +34,6 @@ app.get('/employees', (req, res) => {
 // READ
 app.get('/employee', (req, res) => {
     // name of employee in req.body
-    console.log(req.body);
     // find employee by the name of bob
     const employee = employees.find(employee => employee.name = req.body.name);
     res.send(employee);
@@ -38,6 +41,7 @@ app.get('/employee', (req, res) => {
 
 // CREATE a new employee and add him to the list of employees with a name and salary from the req.body
 app.put('/employee', (req, res) => {
+    console.log(req.body);
     // take in the name of the employee from req.body.name
     const employeeName = req.body.name;
     // take in the salary of the new employee from req.body.salary
@@ -85,3 +89,4 @@ app.delete('/employee', (req, res) => {
 app.listen(port, () => {
     console.log("Express app is listening at http://localhost:3001");
 })
+
