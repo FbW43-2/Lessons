@@ -12,15 +12,30 @@ function App() {
   }, []);
 
   const sendGetRequest = async () => {
-    // TODO
+    try {
+      const resp = await axios.get('http://localhost:3001/employees').then(resp => setEmployees(resp.data));
+    } catch (err) {
+      // error handling
+      console.error(err);
+    }
   };
 
   const addEmployee = async (empName, empSalary) => {
-    // TODO
+    try {
+      await axios.put('http://localhost:3001/employee', { "name": empName, "salary": empSalary }).then(resp => sendGetRequest());
+    } catch (err) {
+      // error handling
+      console.error(err);
+    }
   }
 
   const changeEmployee = async (empName, empSalary) => {
-    // TODO
+    try {
+      await axios.post('http://localhost:3001/updateSalary', { "name": empName, "salary": empSalary }).then(resp => sendGetRequest());
+    } catch (err) {
+      // error handling
+      console.error(err);
+    }
   }
 
   const createEmployee = (event) => {
@@ -71,3 +86,4 @@ function App() {
 }
 
 export default App;
+
