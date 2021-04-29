@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import './App.css';
 const axios = require('axios').default;
@@ -45,6 +47,14 @@ function App() {
     setSalary("");
   }
 
+  const deleteEmployee = async (empName) => {
+    try {
+      await axios.delete("http://localhost:3001/employee", {"data": {"name": empName}}).then(() => sendGetRequest());
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className="App">
       <h1>Create a new employee</h1>
@@ -70,6 +80,7 @@ function App() {
         </p>
       </form>
       <button onClick={() => changeEmployee(name, salary)}>Change salary</button>
+      <button onClick={() => deleteEmployee(name)}>Delete employee</button>
       <h1>Employees</h1>
       <ul style={{ "list-style-type": "none" }}>
         {employees.length < 1 && <li key="empty">No employees yet!</li>}
@@ -86,4 +97,3 @@ function App() {
 }
 
 export default App;
-
