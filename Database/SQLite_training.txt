@@ -1,0 +1,121 @@
+-- Open DBeaver and connect with the Sample Database
+
+-- Select all employees, who report to the General Manager
+SELECT *
+FROM Employee;
+WHERE ReportsTo = 1;
+
+-- Select all cutomers, who live in London
+SELECT *
+FROM Customer
+WHERE City = 'London'
+
+-- Select all Invoices where the amount is bigger than 10
+SELECT *
+FROM Invoice i 
+WHERE Total > 10
+
+-- Select the id from all Invoices where the amount is bigger than 10
+SELECT InvoiceId
+FROM Invoice i 
+WHERE Total > 10
+
+-- Select all songs where the Composer is AC/DC and the duration is longer than 300,000 milliseconds
+SELECT *
+FROM Track 
+WHERE Composer = "AC/DC"
+AND Milliseconds > 300000
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+-- Open DBeaver and connect with the Sample Database
+
+-- Create a new table contacts with and id, first name, last name, email and phone
+CREATE TABLE contacts (
+	contact_id INTEGER PRIMARY KEY,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+	email TEXT NOT NULL UNIQUE,
+	phone TEXT NOT NULL UNIQUE
+);
+
+-- Add 5 contacts to the list
+INSERT INTO contacts
+(contact_id, first_name, last_name, email, phone)
+VALUES(0, 'Bob', 'Muller', 'bob.muller@comp.com', '0192837465');
+
+INSERT INTO contacts
+(contact_id, first_name, last_name, email, phone)
+VALUES(1, 'Anna', 'Schneider', 'anna.schneider@comp.com', '09182737465');
+
+INSERT INTO contacts
+(contact_id, first_name, last_name, email, phone)
+VALUES(2, 'John', 'Smith', 'john.smith@comp.com', '0827364519');
+
+INSERT INTO contacts
+(contact_id, first_name, last_name, email, phone)
+VALUES(3, 'Sam', 'Conner', 'sam.conner@comp.com', '0736451928');
+
+INSERT INTO contacts
+(contact_id, first_name, last_name, email, phone)
+VALUES(4, 'Pete', 'Gutenstein', 'pete.gutenstein@comp.com', '0645918273');
+
+-- make sure that all data is inserted
+SELECT *
+FROM contacts;
+
+--------------------------------------------------------------------------------------
+
+-- Open DBeaver and connect with the Sample Database
+
+-- Update Pete's phone number
+UPDATE contacts
+SET phone = '05551928374'
+WHERE contact_id = 4;
+
+-- Sam got married. Now her last name is Stone. Update her name and mail
+UPDATE contacts 
+SET last_name = "Stone", email = "sam.stone@comp.com"
+WHERE contact_id = 3;
+
+-- See what happens when you try to change all mail adresses to support@comp.com
+UPDATE contacts 
+SET email = "support@comp.com";
+
+-- See what happens when you try to change all phone numbers to null
+UPDATE contacts 
+SET phone = null;
+
+-- Update the contact_id (primary key) of Bob from 0 to 5
+UPDATE contacts 
+SET contact_id = 5
+where contact_id = 0;
+
+-----------------------------------------------------------------------------
+
+-- Open DBeaver and connect with the Sample Database
+
+-- Delete Bob by name
+DELETE FROM contacts
+WHERE first_name = 'Bob';
+
+-- Delete all employees
+DELETE FROM contacts;
+
+-- DROP the table contacts
+DROP TABLE contacts;
+
+-- try to select from the table contacts
+SELECT *
+FROM contacts;
+
+-- create the table again
+CREATE TABLE contacts (
+	contact_id INTEGER PRIMARY KEY,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+	email TEXT NOT NULL UNIQUE,
+	phone TEXT NOT NULL UNIQUE
+);
