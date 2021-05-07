@@ -24,3 +24,31 @@ TODO
 
 # write a statement to remove all movies
 TODO
+
+-------------------------------------------------------------------------------------
+
+-- Open DBeaver and connect with the Sample Database
+
+# check your database to make sure, that you have a movie table filled with movies
+
+# write a statement to delete movies, which
+1) are shorter than 30 minutes
+TODO
+
+# write a statement to delete movies, which
+1) are rated worse than 2 and
+2) longer than 90 minutes
+TODO
+
+# write a statement to delete movies, which
+1) have the value NULL in their rating
+TODO
+
+# write a statement to remove all movies
+TODO
+
+# DROP your table movies
+TODO
+
+# CREATE the table again
+TODO
