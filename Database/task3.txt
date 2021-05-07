@@ -26,3 +26,27 @@ TODO
 
 # think yourself of another example
 TODO
+
+---------------------------------------------------------------------------------------------------
+
+-- Open DBeaver and connect with the Sample Database
+
+# check your database to make sure, that you have a movie table filled with movies
+
+# choose a movie from your table and change the length
+// TODO
+
+# update all movies to have a rating of 0
+// TODO
+
+# update all movies to be 5 minutes long
+TODO
+
+# update the movie Alladin ans set the following new values:
+1) year: 2020
+2) rating: 3.8
+3) length: 135
+TODO
+
+# think yourself of another example
+TODO
