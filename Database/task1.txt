@@ -23,3 +23,30 @@ Add as many movies to your collection as you want (at least 5)
 TODO
 
 # check your database to make sure, that the collection is filled with the movies
+
+--------------------------------------------------------------------------------
+
+# Open DBeaver and connect with the Sample Database
+
+# Create a new table for your movies
+ID: INTEGER PRIMARY KEY
+TITLE: TEXT
+YEAR: INTEGER
+RATING: REAL
+LENNTH: INTEGER
+# TODO
+
+# insert the movie "Aladdin" with following fields:
+1) title: "Aladdin"
+2) year: 2019
+3) rating: 3.9
+4) length: 128
+TODO
+
+# Write at least 5 more statements to insert single movies
+The movie needs to have a title (NOT NULL)
+The movie needs to have a release year (NOT NULL)
+The movie can have a rating f.e. 2.5 (best is 5)
+The movie can have length f.e 145 (minutes)
+
+# check your database to make sure, that the table is filled with the movies
