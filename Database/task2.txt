@@ -24,3 +24,29 @@ TODO
 
 # think yourself of one more statement
 TODO
+
+----------------------------------------------------------------------------------------
+
+-- Open DBeaver and connect with the Sample Database
+
+# check your database to make sure, that you have a movie table filled with movies
+TODO
+
+# write a statement to read all movies from your table
+TODO
+
+# write a statement to read all movies from your table, which are:
+1) released after the year 2000
+TODO
+
+# write a statement to read all movies from your table, which are:
+1) longer than 90 minutes and
+2) rated better than 4
+TODO
+
+# write a statement to read all movies from your table, which:
+1) don't have a rating
+TODO
+
+# think yourself of one more statement
+TODO
