@@ -1,3 +1,28 @@
+MongoDB:
+-- Prepare a statement, which can add movies with a subdocument (actors).
+The array (subdocument) should contain the following keys:
+2. First Name (STRING)
+3. Last Name (STRING)
+4. Age (Integer)
+5. Nationality (STRING)
+TODO
+
+-- For every movie that you have, research the main actors and insert them to the collection
+TODO
+
+-- Write a statement, which finds all actors, who played in the movie Alladin
+TODO
+
+-- Write a statement, which finds all actors, who played in a movie rated better than 3
+TODO
+
+-- Write a SELECT statement, which finds all actors from the US, who played in a movie rated better than 2
+TODO
+
+
+----------------------------------------------------------------------------------------------------------
+
+
 -- Create a new table Actors
 The table needs to have the following columns
 1. ID (Integer)
