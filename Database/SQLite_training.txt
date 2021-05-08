@@ -119,3 +119,25 @@ CREATE TABLE contacts (
 	email TEXT NOT NULL UNIQUE,
 	phone TEXT NOT NULL UNIQUE
 );
+
+----------------------------------------------------
+# JOIN
+
+-- Select all customers, who's supporting employee is Jane Peacock
+
+SELECT c.* 
+FROM customer c, Employee e 
+WHERE c.SupportRepId  = e.EmployeeId
+AND e.EmployeeId = 3
+
+-- Select all albums, who's artist is "AC/DC"
+SELECT a.*
+FROM Album a, Artist a2
+WHERE a.ArtistId = a2.ArtistId
+AND a2.ArtistId = 1
+
+-- Select all tracks, who belong to album "For Those About To Rock We Salute You"
+SELECT a.*
+FROM Album a, Track t 
+WHERE a.AlbumId = t.AlbumId
+AND a.AlbumId = 1
