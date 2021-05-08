@@ -163,3 +163,55 @@ db.books.remove(
 
 # remove all entries
 db.books.remove( { } )
+
+
+----------------------------------------------------------------------------
+
+db.books.insertOne({"author": "John Smith", "title": "The art of music", "price": 12,
+    "chapters": [{
+        "headline": "Theory of sound",
+        "pages": 12
+    }, {
+        "headline": "History of Music",
+        "pages": 30
+    }, {
+        "headline": "Instruments",
+        "pages": 80
+    }]
+});
+
+
+db.books.insertOne({"author": "John Smith", "title": "Programming for dummies", "price": 18,
+    "chapters": [{
+        "headline": "Basics of Programming",
+        "pages": 20
+    }, {
+        "headline": "How to write code",
+        "pages": 49
+    }, {
+        "headline": "Write your own program",
+        "pages": 30
+    }]
+});
+
+db.books.insertOne({"author": "John Smith", "title": "Vegan Cooking", "price": 22,
+    "chapters": [{
+        "headline": "The nutricous diet",
+        "pages": 16
+    }, {
+        "headline": "5 recepies in under 20 minutes",
+        "pages": 89
+    }, {
+        "headline": "The best ingrediends",
+        "pages": 22
+    }]
+});
+
+# Find a book, which has the title "Theory of sound"
+db.books.find( { "chapters.headline": "Theory of sound" } )
+
+# Find all books with at least one chapter longer than 50 pages 
+db.books.find( { "chapters.pages": { $gt:50} } )
+
+# Find all books, who's chapters have either 16, 89 or 22 pages
+db.books.find( { "chapters.pages": { "$all": [16, 89, 22] }} )
