@@ -2,17 +2,25 @@
 TODO
 
 # use the existing database mediaStore
-TODO
+use mediaStore
 
 # create a new collection for your movies
-#TODO
+db.createCollection("movies")
 
 # insert the movie "Aladdin" with following fields:
 1) title: "Aladdin"
 2) year: 2019
 3) rating: 3.9
 4) length: 128
-TODO
+
+db.movies.insertOne(
+    {
+        "title": "Aladdin",
+        "year": 2019,
+        "rating": 3.9,
+        "length": 128
+    }
+)
 
 # insert many movies at one:
 Add as many movies to your collection as you want (at least 5)
@@ -20,9 +28,43 @@ Add as many movies to your collection as you want (at least 5)
 2) A moie should have a release year f.e. 2006
 3) some movies can have a rating f.e. 2.5 (best is 5)
 4) some movies can have length f.e 145 (minutes)
-TODO
+
+db.movies.insertMany([
+    {
+        "title": "Angels & Demons",
+        "year": 2009,
+        "rating": 6.7,
+        "length": 146
+    },
+    {
+        "title": "Déjà Vu",
+        "year": 2006,
+        "rating": 7.1,
+        "length": 126
+    },
+    {
+        "title": "World War Z",
+        "year": 2013,
+        "rating": 7,
+        "length": 123
+    },
+    {
+        "title": "Broken Flowers",
+        "year": 2005,
+        "rating": 7.2,
+        "length": 106
+    },
+    {
+        "title": "Abdullah",
+        "year": 1980,
+        "rating": 6.4,
+        "length": 142
+    }
+])
+
 
 # check your database to make sure, that the collection is filled with the movies
+-> MongoDB Compass
 
 --------------------------------------------------------------------------------
 
