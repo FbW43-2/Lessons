@@ -76,14 +76,24 @@ TITLE: TEXT
 YEAR: INTEGER
 RATING: REAL
 LENNTH: INTEGER
-# TODO
+
+CREATE TABLE movies(
+	id INTEGER PRIMARY KEY,
+	title TEXT NOT NULL UNIQUE,
+	year INTEGER NOT NULL,
+	rating REAL,
+	length INTEGER
+);
 
 # insert the movie "Aladdin" with following fields:
 1) title: "Aladdin"
 2) year: 2019
 3) rating: 3.9
 4) length: 128
-TODO
+
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(0, 'Aladdin', 2019, 3.9, 128);
 
 # Write at least 5 more statements to insert single movies
 The movie needs to have a title (NOT NULL)
@@ -91,4 +101,27 @@ The movie needs to have a release year (NOT NULL)
 The movie can have a rating f.e. 2.5 (best is 5)
 The movie can have length f.e 145 (minutes)
 
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(1, 'Angels & Demons', 2006, 7.1, 126);
+
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(2, 'Déjà Vu', 2013, 7, 123);
+
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(3, 'World War Z', 2005, 7.2, 106);
+
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(4, 'Broken Flowers', 2005, 0, 0);
+
+INSERT INTO movies
+(id, title, "year", rating, "length")
+VALUES(5, 'Before The Flood', 2016, 8.2, 96);
+
+
 # check your database to make sure, that the table is filled with the movies
+
+Look up the table movies in DBeaver
