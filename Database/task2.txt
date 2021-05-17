@@ -1,29 +1,36 @@
 # connect to mongodb
-TODO
+Using MongoDB Compass
 
 # use the existing database mediaStore
-TODO
+use mediaStore
 
 # check your database to make sure, that you have a movie collection filled with movies
 
 # write a statement to read all movies from your collection
-TODO
+db.movies.find()
 
 # write a statement to read all movies from your collection, which are:
 1) released after the year 2000
-TODO
+db.movies.find({'year': {$gt: 2000}})
 
 # write a statement to read all movies from your collection, which are:
 1) longer than 90 minutes and
 2) rated better than 4
-TODO
+db.movies.find(
+    {'length': {$gt: 90},
+    'rating': {$gt: 4}
+    }
+)
 
 # write a statement to read all movies from your collection, which:
 1) don't have a rating
-TODO
+db.movies.find(
+    {'title': {$exists: false}
+    }
+)
 
 # think yourself of one more statement
-TODO
+optional
 
 ----------------------------------------------------------------------------------------
 
