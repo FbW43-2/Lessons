@@ -1,15 +1,19 @@
 # connect to mongodb
-TODO
+connect with MongoDB Compass
 
 # use the existing database mediaStore
-TODO
+use mediaStore
 
 # check your database to make sure, that you have a movie collection filled with movies
 
 # write a statement to update all movies from your collection and have a new field "restricted" (to age):
 1) field: "restricted"
 2) default value: "+7"
-TODO
+db.movies.updateMany({
+},
+{
+    $set: { "restricted": "+7" }
+})
 
 # choose a movie from your collection and update it to be restricted to adults only (+18)
 TODO
