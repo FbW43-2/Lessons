@@ -16,20 +16,49 @@ db.movies.updateMany({
 })
 
 # choose a movie from your collection and update it to be restricted to adults only (+18)
-TODO
+db.movies.findOneAndUpdate(
+    {
+        "title": "World War Z"
+    },
+    {
+        $set: {
+            "restricted": "+18"
+        }
+    }
+)
 
 # update all movies to be 5 minutes longer (commercial)
-TODO
+db.movies.updateMany(
+    {
+    },
+    {
+        $inc: {
+            "length": 5
+        }
+    }
+)
 
 # A new movie of Aladdin got released. Update the movie Aladdin:
 1) year: 2020
 2) rating: 3.8
 3) length: 135
 4) restricted: "+7"
-TODO
+db.movies.updateOne(
+     {
+         "title": "Aladdin"
+     },
+     {
+         $set: {
+             "year": 2020,
+             "rating": 3.8,
+             "length": 135,
+             "restricted": "+7"
+         }
+     }
+)
 
 # think yourself of another example
-TODO
+optional
 
 ---------------------------------------------------------------------------------------------------
 
