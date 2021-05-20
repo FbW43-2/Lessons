@@ -52,11 +52,16 @@ WHERE "year" > 2010;
 # write a statement to read all movies from your table, which are:
 1) longer than 90 minutes and
 2) rated better than 4
-TODO
+SELECT *
+FROM movies
+WHERE "length" > 90
+AND "rating" > 4
 
 # write a statement to read all movies from your table, which:
-1) don't have a rating
-TODO
+1) all have a rating
+SELECT *
+FROM movies
+WHERE rating IS NOT NULL
 
 # think yourself of one more statement
 TODO
