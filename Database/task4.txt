@@ -53,22 +53,27 @@ db.movies.deleteMany({})
 
 # write a statement to delete movies, which
 1) are shorter than 30 minutes
-TODO
+DELETE FROM movies
+WHERE "length" < 30;
 
 # write a statement to delete movies, which
 1) are rated worse than 2 and
 2) longer than 90 minutes
-TODO
+DELETE FROM movies
+WHERE "rating" < 2
+AND "length" > 90
 
 # write a statement to delete movies, which
 1) have the value NULL in their rating
 TODO
+-- SKIPPED --
 
 # write a statement to remove all movies
-TODO
+DELETE FROM movies;
 
 # DROP your table movies
-TODO
+DROP TABLE movies;
 
 # CREATE the table again
 TODO
+-- SKIPPED --
