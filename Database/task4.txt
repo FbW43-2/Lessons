@@ -8,22 +8,42 @@ TODO
 
 # write a statement to delete movies, which
 1) are shorter than 30 minutes
-TODO
+db.movies.deleteMany(
+    {
+        "length": { $lt: 30}
+    }
+)
 
 # write a statement to delete movies, which
 1) are rated worse than 2 and
 2) are restricted to adults (+18)
-TODO
+db.movies.deleteMany(
+    {
+        $and: 
+            [
+                {"rating": { $lt: 2}},
+                {"restricted": "+18"}
+            ]
+    }
+)
 
 # write a statement to delete movies, which
 1) dont't have a field "rating"
-TODO
+db.movies.deleteMany(
+    {
+        "rating": { $exists: false }
+    }
+)
 
 # write a statement to remove only one movie, which is longer than 120 minutes
-TODO
+db.movies.deleteOne(
+    {
+        "length": { $gt: 120}
+    }
+)
 
 # write a statement to remove all movies
-TODO
+db.movies.deleteMany({})
 
 -------------------------------------------------------------------------------------
 
