@@ -129,40 +129,39 @@ db.books.findOneAndUpdate(
 ---------------------------------------------------------
 
 # remove books that dont't have an "inStock" or "german" field
-db.books.remove({
-    "$or": [
-        { "inStock": { "$exists": false } },
-        { "german": { "$exists": false } }
-    ]
-})
+db.books.deleteMany(
+    {
+        $or: [
+            {"inStock": { $exists: false }},
+            {"german": { $exists: false }}
+        ]
+    }
+)
 
 # remove the book "Yoga for Men"
-db.books.remove( 
+db.books.deleteMany( 
      { 
          "title": "Yoga for men"
      } 
 );
 
 # remove one book written by Angelina Brown
-db.books.remove( 
-     { 
-         "author": "Angelina Brown"
-     },
-     {
-         justOne: true
-     }
+db.books.deleteOne(
+    {
+        "author": "Angelina Brown"
+    }
 );
 
 
 # remove books which are not in stock
-db.books.remove( 
-    { 
-        "inStock": 0 
-    } 
-);
+db.books.deleteMany(
+    {
+        "inStock": 0
+    }
+)
 
 # remove all entries
-db.books.remove( { } )
+db.books.deleteMany({})
 
 
 ----------------------------------------------------------------------------
