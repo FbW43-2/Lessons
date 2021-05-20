@@ -67,19 +67,27 @@ optional
 # check your database to make sure, that you have a movie table filled with movies
 
 # choose a movie from your table and change the length
-// TODO
+UPDATE movies
+SET "length"=120
+WHERE title='Aladdin';
 
 # update all movies to have a rating of 0
-// TODO
+UPDATE movies
+SET "rating" = 0;
 
 # update all movies to be 5 minutes long
-TODO
+UPDATE movies
+SET "mo
 
 # update the movie Alladin ans set the following new values:
 1) year: 2020
 2) rating: 3.8
 3) length: 135
-TODO
+UPDATE movies 
+SET "length" = 135,
+"year" = 2020,
+"rating" = 3.8
+WHERE "title" = "Aladdin";
 
 # think yourself of another example
 TODO
