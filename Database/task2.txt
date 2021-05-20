@@ -40,11 +40,14 @@ optional
 TODO
 
 # write a statement to read all movies from your table
-TODO
+SELECT *
+FROM movies;
 
 # write a statement to read all movies from your table, which are:
-1) released after the year 2000
-TODO
+1) released after the year 2010
+SELECT *
+FROM movies
+WHERE "year" > 2010;
 
 # write a statement to read all movies from your table, which are:
 1) longer than 90 minutes and
