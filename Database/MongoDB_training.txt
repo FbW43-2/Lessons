@@ -214,3 +214,6 @@ db.books.find( { "chapters.pages": { $gt:50} } )
 
 # Find all books, who's chapters have either 16, 89 or 22 pages
 db.books.find( { "chapters.pages": { "$all": [16, 89, 22] }} )
+
+# Find only the chapters of the book "Vegan Cooking" by John Smith
+db.books.find({"author": "John Smith", "title": "Vegan Cooking"}, {"author": 0, "title": 0, "_id": 0, "price": 0})
