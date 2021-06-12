@@ -206,7 +206,7 @@ db.books.insertOne({"author": "John Smith", "title": "Vegan Cooking", "price": 2
     }]
 });
 
-# Find a book, which has the title "Theory of sound"
+# Find a book, which has the chapter "Theory of sound"
 db.books.find( { "chapters.headline": "Theory of sound" } )
 
 # Find all books with at least one chapter longer than 50 pages 
